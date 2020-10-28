@@ -1,0 +1,10 @@
+
+
+path {
+    opacity: 50%;
+   }
+
+path:hover {
+   opacity: 100%;
+    transition: 0.5s;
+}
