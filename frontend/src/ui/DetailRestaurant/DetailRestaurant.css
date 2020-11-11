@@ -1,0 +1,73 @@
+
+
+.card-title{
+    margin-top: 1em;
+}
+.card{
+    display: flex;
+    align-content: space-around;
+}
+.col-md-4{
+    margin-right: 2em;
+}
+.card-img{
+    margin: 1em;
+    width: 150px;
+    height: 200px;
+}
+.card-img{
+    webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+.card{
+    webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+.card-body{
+    padding: 0em;
+}
+#information{
+    webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    border: solid black 2px;
+    border-radius: 1em;
+    margin-bottom: 2em;
+
+}
+.footing{
+    border: solid black 2px;
+    /*display: flex;*/
+    /*justify-content:space-between;*/
+    background: #F7FF0D;
+    background: -moz-linear-gradient(-45deg, #ffd700 0%, #C7C7C7 71%, #bf0a30 100%);
+    background: -webkit-linear-gradient(-45deg, #ffd700 0%, #C7C7C7 71%, #bf0a30 100%);
+    background: linear-gradient(135deg, #ffd700 0%, #C7C7C7 71%, #bf0a30 100%);
+    webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+}
+.ul
+
+    /*---------------rona rating----------------*/
+.rating > span:hover:before {
+    content: "\2605";
+    position: absolute;
+}
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+}
+
+/*------------ text --------------*/
+.col-md-4 {
+    padding: 2em 2em;
+}
