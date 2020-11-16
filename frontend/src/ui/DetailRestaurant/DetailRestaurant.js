@@ -21,24 +21,26 @@ export const DetailRestaurant= () => (
             <p className="card-text">
                 <h6>Address and Hours:UNM Carri Tingley Hospital -</h6>
                 <p>1127 University Blvd, NE Albuquerque, NM 87102 Friday 8:00am - 2:00pm</p>
+                <h6>contact Information:</h6>
+                <li>Phone Number:505-319-5619</li>
+                <li>Delivery Option: Yes with a perches of $20.00 or more.</li>
+                <li>Patio Option: Yes</li>
             </p>
         </div>
     </div>
 </div>
 </div>
 </Container>
-<Container>
-    <div className="row no-gutters" id="information">
-        <div className="col-md-4">
-            <h2>contact Information:</h2>
-            <ul className="text">
-                <li>Phone Number:505-319-5619</li>
-                <li>Delivery Option: Yes with a perches of $20.00 or more.</li>
-                <li>Patio Option: Yes</li>
-            </ul>
-        </div>
-    </div>
-</Container>
+{/*<Container>*/}
+{/*    <div className="row no-gutters" id="information">*/}
+{/*        <div className="col-md-4">*/}
+{/*            <h2>contact Information:</h2>*/}
+{/*            <ul className="text">*/}
+{/*               */}
+{/*            </ul>*/}
+{/*        </div>*/}
+{/*    </div>*/}
+{/*</Container>*/}
 <Container>
     <div className="card border-dark mb-3">
         <div className="row no-gutters">
