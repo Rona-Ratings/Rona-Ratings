@@ -2,7 +2,7 @@
 import React from "react";
 import {Container} from "react-bootstrap";
 import {Badge} from "react-bootstrap";
-import "./DetailRestaurant.css"
+import "./DetailRestaurant.css";
 
 export const DetailRestaurant= () => (
 

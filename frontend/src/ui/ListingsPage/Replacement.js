@@ -1,16 +1,19 @@
-console.log('Taco')
-const fetchData = () => {
-    fetch('https://ddc-web-student.cnm.edu/apis/')
-        .then(response => response.json())
-        .then(initFetchObj => {
-                //console.log(initFetchObj.data[1])
-                const cardInfo = document.getElementById("card-info");
-                const data = initFetchObj.data
 
-                function setTagsWithMap(data) {
 
-                    const mapCallback = (data) => {
-                        return `
+
+
+    function fetchData () {
+        fetch('https://ddc-web-student.cnm.edu/apis/')
+            .then(response => response.json())
+            .then(initFetchObj => {
+
+                    const cardInfo = document.getElementById("card-info");
+                    const data = initFetchObj.data
+
+                    function setTagsWithMap(data) {
+
+                        const mapCallback = (data) => {
+                            return   `
             <div class="card">
                 <div class="card-header">
                     ${data.title}
@@ -29,14 +32,15 @@ const fetchData = () => {
                     </div>
                 
             </div>`;
+                        }
+
+                        const cards = data.map(mapCallback)
+                        return cards;
                     }
-
-                    const cards = data.map(mapCallback)
-                    return cards;
+                    cardInfo.innerHTML = setTagsWithMap(data).join(" ")
                 }
-                cardInfo.innerHTML = setTagsWithMap(data).join(" ")
-            }
 
-        )
+            )
 
-}
+    }
+fetchData()
