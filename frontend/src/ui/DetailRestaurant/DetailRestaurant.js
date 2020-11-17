@@ -1,12 +1,6 @@
 import React from "react";
-<<<<<<< HEAD
-import {Container} from "react-bootstrap";
-import {Badge} from "react-bootstrap";
-import "./DetailRestaurant.css";
-=======
 import {Badge, Container} from "react-bootstrap";
 import "./DetailRestaurant.css"
->>>>>>> origin/details-page
 
 export const DetailRestaurant = () => (
 

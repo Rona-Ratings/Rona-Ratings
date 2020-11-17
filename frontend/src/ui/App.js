@@ -13,7 +13,7 @@ export const App = () => (
             <Switch>
                 <Route exact path="/detail-restaurant" component={DetailRestaurant}/>
                 <Route exact path="/listing-Page" component={ListingPage}/>
-                <Route exact path="/FrontPage" component={FrontPage}/>
+                <Route exact path="/front-page" component={FrontPage}/>
                 <Route exact path='/' component={Home} />
                 <Route component={FourOhFour} />
             </Switch>

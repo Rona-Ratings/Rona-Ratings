@@ -1,6 +1,5 @@
-
 import React from "react";
-import {Container} from "react-bootstrap";
+
 import "./FrontPage.css";
 
 export const FrontPage= () => (
@@ -8,12 +7,12 @@ export const FrontPage= () => (
     <>
 
 
-            <header>
+        <header>
             <div className="container">
                 <nav className="nav">
-                    <a href="index.html" className="logo-box">
+                    <a href="" className="logo-box">
                         <img src="" alt="" className="logo"/>
-                      </a>
+                    </a>
                     <ul className="nav-list">
                         <li className="nav-item">
                             <a href="#" className="nav-link">Home</a>
