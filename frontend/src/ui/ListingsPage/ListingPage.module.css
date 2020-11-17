@@ -1,0 +1,14 @@
+.card-title {
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+
+}
+
+.card-header {
+    color: black;
+    background-color: black;
+    text-align: center;
+    border-radius: 0;
+
+}

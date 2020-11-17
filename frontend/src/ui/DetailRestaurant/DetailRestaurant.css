@@ -68,20 +68,13 @@ header{
 .card-title{
     margin-top: 1em;
 }
-.card{
-    display: flex;
-    align-content: space-around;
-}
+
 .col-md-4{
     margin-right: 2em;
 }
 /*===========End Restaurant Information===========*/
 /*===========Image Logo===========*/
-.card-img{
-    margin: 1em;
-    width: 150px;
-    height: 200px;
-}
+
 /*===========Image Logo===========*/
 .card-img{
     webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 5px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);

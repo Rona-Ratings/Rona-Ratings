@@ -1,6 +1,7 @@
-import React from "react";
 import './ListingPage.css'
+import React from "react";
 
+import styles from "./ListingPage.module.css"
 import TacoPlaceHolder from './tacos-placeholder.jpg'
 import {Badge} from "react-bootstrap";
 
@@ -33,29 +34,39 @@ export const ListingPage = () => {
                 </div>
         <div>
             <div className="container">
-                <div className="row">
+
 
                     <div className="row d-flex justify-content-center">
                         <div className="col-lg-12">
                             <div className="card">
-                                <div className="card-header">
+                                <div className={styles.cardHeader}>
+                                    <div className="card-header">
                                     FriendsCafe
+                                    </div>
                                 </div>
-
                                 <div className="col-lg-12">
-                                    <img src={TacoPlaceHolder} className="float-left" alt="placeholder" />
-                                        <div className="card-body ">
-
-                                            <div><p>Rona-Ratings</p></div>
-                                            <div><p>Location: 12365 Fake Drive NE</p></div>
-                                            <div><p>dine in</p></div>
+                                    <div className="row">
+                                    <div className="col-lg-5">
+                                    <img src={TacoPlaceHolder} className="card-img" alt="placeholder" />
+                                    </div>
+                                    <div className="col-lg-7">
+                                        <div className="card-body">
+                                            <h3 className="card-title">Restaurant Information:</h3>
+                                            <p className="card-text">
+                                                <h4>Address and Hours:UNM Carri Tingley Hospital -</h4>
+                                                <p>1127 University Blvd, NE Albuquerque, NM 87102 Friday 8:00am - 2:00pm</p>
+                                                <h4>contact Information:</h4>
+                                                <li>Phone Number:505-319-5619</li>
+                                                <li>Delivery Option: Yes with a perches of $20.00 or more.</li>
+                                                <li>Patio Option: Yes</li>
+                                            </p>
                                         </div>
-
-
+                                    </div>
+                                    </div>
                                 </div>
 
                             </div>
-
+                        </div>
 
 
 
@@ -144,10 +155,10 @@ export const ListingPage = () => {
 
 
                         </div>
-                    </div>
+
                 </div>
             </div>
-        </div>
+
 
             </>
         )
