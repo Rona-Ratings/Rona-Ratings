@@ -1,3 +1,5 @@
 /.idea
 .DS_Store
 wsvideo.mp4
+frontend/project.env
+frontend/node_modules
