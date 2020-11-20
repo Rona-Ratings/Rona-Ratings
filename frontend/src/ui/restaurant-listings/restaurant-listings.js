@@ -1,12 +1,12 @@
-import './ListingPage.css'
+import './restaurant-listings.css'
 import React from "react";
 
-import styles from "./ListingPage.module.css"
+import styles from "./restaurant-listings.module.css"
 import TacoPlaceHolder from './tacos-placeholder.jpg'
 import {Badge} from "react-bootstrap";
 
 
-export const ListingPage = () => {
+export const RestaurantListings = () => {
 
 
         return (
@@ -37,19 +37,19 @@ export const ListingPage = () => {
 
 
                     <div className="row d-flex justify-content-center">
-                        <div className="col-lg-12">
+                        <div className="col-lg-12 px-0">
                             <div className="card">
                                 <div className={styles.cardHeader}>
                                     <div className="card-header">
-                                    FriendsCafe
+                                    Taco Juan's Taco Shop
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="row">
-                                    <div className="col-lg-5">
+                                    <div className="col-lg-3 d-flex justify-content-center">
                                     <img src={TacoPlaceHolder} className="card-img" alt="placeholder" />
                                     </div>
-                                    <div className="col-lg-7">
+                                    <div className="col-lg-9 d-flex align-items-center">
                                         <div className="card-body">
                                             <h3 className="card-title">Restaurant Information:</h3>
                                             <p className="card-text">

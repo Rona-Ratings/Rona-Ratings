@@ -3,17 +3,17 @@ import { Route, Switch } from 'react-router'
 import { Home } from './Home'
 import { FourOhFour } from './FourOhFour'
 import React from 'react'
-import {DetailRestaurant} from "./DetailRestaurant/DetailRestaurant";
-import { ListingPage } from "./ListingsPage/ListingPage";
-import { FrontPage} from "./FrontPage/FrontPage";
+import {RestaurantDetails} from "./restaurant-details/restaurant-details";
+import { RestaurantListings } from "./restaurant-listings/restaurant-listings";
+import { RestaurantHome} from "./restaurant-home/restaurant-home";
 
 export const App = () => (
     <>
         <BrowserRouter>
             <Switch>
-                <Route exact path="/detail-restaurant" component={DetailRestaurant}/>
-                <Route exact path="/listing-Page" component={ListingPage}/>
-                <Route exact path="/front-page" component={FrontPage}/>
+                <Route exact path="/restaurant-details" component={RestaurantDetails}/>
+                <Route exact path="/restaurant-listings" component={RestaurantListings}/>
+                <Route exact path="/restaurant-home" component={RestaurantHome}/>
                 <Route exact path='/' component={Home} />
                 <Route component={FourOhFour} />
             </Switch>

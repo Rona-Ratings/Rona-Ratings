@@ -1,9 +1,9 @@
 import React from "react";
 import {Badge, Container} from "react-bootstrap";
-import "./DetailRestaurant.css"
-import TacoPlaceHolder from '../ListingsPage/tacos-placeholder.jpg'
-import styles from "../ListingsPage/ListingPage.module.css";
-export const DetailRestaurant = () => (
+import "./restaurant-details.css"
+import TacoPlaceHolder from '../restaurant-listings/tacos-placeholder.jpg'
+import styles from "../restaurant-listings/restaurant-listings.module.css";
+export const RestaurantDetails = () => (
 
     <>
         <Container>
@@ -34,15 +34,15 @@ export const DetailRestaurant = () => (
                     <div className="card">
                         <div className={styles.cardHeader}>
                             <div className="card-header">
-                                FriendsCafe
+                                Taco Juan's Taco Shop
                             </div>
                         </div>
-                        <div className="col-lg-12">
+                        <div className="col-lg-12 px-0">
                             <div className="row">
-                                <div className="col-lg-5">
+                                <div className="col-lg-3 d-flex justify-content-center">
                                     <img src={TacoPlaceHolder} className="card-img" alt="placeholder" />
                                 </div>
-                                <div className="col-lg-7">
+                                <div className="col-lg-9 d-flex align-items-center">
                                     <div className="card-body">
                                         <h3 className="card-title">Restaurant Information:</h3>
                                         <p className="card-text">

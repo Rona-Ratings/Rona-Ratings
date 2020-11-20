@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./FrontPage.css";
+import "./restaurant-home.css";
 import Logo from './logo-ws.png'
-export const FrontPage= () => (
+export const RestaurantHome= () => (
 
     <>
     <header>
