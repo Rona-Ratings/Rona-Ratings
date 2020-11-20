@@ -1,12 +1,12 @@
 import React from "react";
-import {Badge, Container} from "react-bootstrap";
+import {Badge} from "react-bootstrap";
 import "./restaurant-details.css"
 import TacoPlaceHolder from '../restaurant-listings/tacos-placeholder.jpg'
 import styles from "../restaurant-listings/restaurant-listings.module.css";
 export const RestaurantDetails = () => (
 
     <>
-        <Container>
+
 
             <div className="container">
                 <nav className="nav">
@@ -27,17 +27,17 @@ export const RestaurantDetails = () => (
                     </ul>
                 </nav>
             </div>
-        </Container>
-        <Container>
+
+        <div className="container">
             <div className="row d-flex justify-content-center">
-                <div className="col-lg-12">
+                <div className="col-lg-12 px-0">
                     <div className="card">
                         <div className={styles.cardHeader}>
                             <div className="card-header">
                                 Taco Juan's Taco Shop
                             </div>
                         </div>
-                        <div className="col-lg-12 px-0">
+                        <div className="col-lg-12">
                             <div className="row">
                                 <div className="col-lg-3 d-flex justify-content-center">
                                     <img src={TacoPlaceHolder} className="card-img" alt="placeholder" />
@@ -49,20 +49,22 @@ export const RestaurantDetails = () => (
                                             <h4>Address and Hours:UNM Carri Tingley Hospital -</h4>
                                             <p>1127 University Blvd, NE Albuquerque, NM 87102 Friday 8:00am - 2:00pm</p>
                                             <h4>contact Information:</h4>
-                                            <li>Phone Number:505-319-5619</li>
-                                            <li>Delivery Option: Yes with a perches of $20.00 or more.</li>
-                                            <li>Patio Option: Yes</li>
+                                            <ul>
+                                                <li>Phone Number:505-319-5619</li>
+                                                <li>Delivery Option: Yes with a perches of $20.00 or more.</li>
+                                                <li>Patio Option: Yes</li>
+                                            </ul>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-        </Container>
-        <Container>
+        </div>
+        <div className="container px-0">
+
             <div className="card border-dark mb-3">
                 <div className="row no-gutters">
                     <div className="col-md-4">
@@ -86,8 +88,8 @@ export const RestaurantDetails = () => (
                     </div>
                 </div>
             </div>
-        </Container>
-        <Container>
+        </div>
+        <div className="container">
             <div className="footer">
                 <div className="footer-content">
                     <div className="footer-section about">
@@ -171,7 +173,7 @@ export const RestaurantDetails = () => (
             </div>
 
 
-        </Container>
+        </div>
 
 
     </>
