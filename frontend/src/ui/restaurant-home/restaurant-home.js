@@ -48,6 +48,7 @@ export const RestaurantHome= () => (
 
 
 
+
                     <div class="search">
 
                         <input type="text" class="search-bar" placeholder="zip code"/>
