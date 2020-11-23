@@ -233,27 +233,7 @@ header{
 
 /*===========End Of Footing===========*/
 
-/*===========Rona Rating===========*/
-h2{
-    padding-left: 1em;
-    font-size: 20px;
-}
-.rating > span:hover:before {
-    content: "\2605";
-    position: absolute;
 
-}
-.rating {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    padding-left: 2em;
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-    content: "\2605";
-    position: absolute;
-}
-/*===========End Rona Rating===========*/
 /*------------ text --------------*/
 .col-md-4 {
     padding: 2em 2em;

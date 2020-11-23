@@ -6,7 +6,7 @@ import React from 'react'
 import {RestaurantDetails} from "./restaurant-details/restaurant-details";
 import { RestaurantListings } from "./restaurant-listings/restaurant-listings";
 import { RestaurantHome} from "./restaurant-home/restaurant-home";
-
+import "./restaurant-home/restaurant-home.css"
 export const App = () => (
     <>
         <BrowserRouter>

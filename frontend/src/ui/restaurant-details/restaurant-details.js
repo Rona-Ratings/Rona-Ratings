@@ -1,8 +1,14 @@
 import React from "react";
-import {Badge} from "react-bootstrap";
+
+
 import "./restaurant-details.css"
+
+import {Badge, Container} from "react-bootstrap";
+import restaurantDetails from"../restaurant-details/restaurant-details.module.css"
+
 import TacoPlaceHolder from '../restaurant-listings/tacos-placeholder.jpg'
 import styles from "../restaurant-listings/restaurant-listings.module.css";
+
 export const RestaurantDetails = () => (
 
     <>
@@ -68,22 +74,22 @@ export const RestaurantDetails = () => (
             <div className="card border-dark mb-3">
                 <div className="row no-gutters">
                     <div className="col-md-4">
-                        <h2>Rona Ratings</h2>
-                        <div className="rating">
-                            <p> : Wearing Mask</p><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-
+                        <h2 className={restaurantDetails}>Rona Ratings</h2>
+                        <div className={restaurantDetails.rating}>
+                            <span className={1}>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                            <p>: Wearing Mask</p>
                         </div>
-                        <div className="rating">
-                            <p> : Clean Sitting Area</p>
+                        <div className={restaurantDetails.rating}>
                             <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-
+                            <p>: Clean Sitting Area</p>
                         </div>
-                        <div className="rating">
-                            <p> : 6ft Rule</p><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-
+                        <div className={restaurantDetails.rating}>
+                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                            <p>: 6ft Rule</p>
                         </div>
-                        <div className="rating">
-                            <p> : Safe Takeout</p><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                        <div className={restaurantDetails.rating}>
+                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                            <p>: Safe Takeout</p>
                         </div>
                     </div>
                 </div>
@@ -143,8 +149,6 @@ export const RestaurantDetails = () => (
                             <i className="fas fa-envelope">
                                 Send</i>
                         </button>
-
-
                         <h3>About Us</h3>
                         <div className="footing">
                             <div className="col-row mb-4">
@@ -163,18 +167,12 @@ export const RestaurantDetails = () => (
                                 </Badge>{' '}
                                 <div className="footer-bottom">
                                     &copy; Covid-9-Team|Deep Dive Coding
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
     </>
 )
