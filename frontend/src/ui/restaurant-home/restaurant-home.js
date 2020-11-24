@@ -1,32 +1,11 @@
 import React from "react";
-
 import "./restaurant-home.css";
 import Logo from './logo-ws.png'
+// import {Navigation} from "../Navigation";
 export const RestaurantHome= () => (
 
-    <>
-    <header>
-        <div class="container">
-            <nav class="nav">
-
-
-
-
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">List of Restaurants</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">About us</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+       <>
+        {/*<Navigation/>*/}
 
     <section class="landing-page">
         <div class="container">
@@ -103,7 +82,6 @@ export const RestaurantHome= () => (
 
 
 
-
 <div class="footer">
     <div class="footer-content">
         <div class="footer-section about">
@@ -154,5 +132,11 @@ export const RestaurantHome= () => (
     </div>
     <div class="footer-bottom">
         &copy; Covid-9-Team|Deep Dive Coding
+
     </div>
-</div></>)
+</div>
+
+</>
+
+
+)
