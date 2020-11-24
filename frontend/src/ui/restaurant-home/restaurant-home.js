@@ -8,10 +8,6 @@ export const RestaurantHome= () => (
     <header>
         <div class="container">
             <nav class="nav">
-
-
-
-
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="#" class="nav-link">Home</a>
