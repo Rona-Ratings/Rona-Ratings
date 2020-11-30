@@ -1,7 +1,7 @@
 /.idea
 .DS_Store
 wsvideo.mp4
-/project.env
+/rona-ratings.env
 frontend/node_modules
 /conceptual-model.md
 /backend/node_modules
