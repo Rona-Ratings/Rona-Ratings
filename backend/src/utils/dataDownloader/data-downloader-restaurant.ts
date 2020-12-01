@@ -1,5 +1,6 @@
 import axios from "axios"
 import {Restaurant} from "../interfaces/Restaurant";
+import {insertRestaurant} from "../restaurant/insertRestaurant";
 
 
 /*interface Restaurant {
@@ -14,20 +15,22 @@ import {Restaurant} from "../interfaces/Restaurant";
 
 }*/
 
-function dataDownloader() : Promise<any> {
+function dataDownloaderRestaurant() : Promise<any> {
 	return main()
 	async function main() {
 		try {
-			await downloadPosts()
+			await downloadRestaurants()
 
 		} catch (e) {
-			console.log(e)
+			console.log(e.message)
 		}
 	}
 
-	async function downloadPosts() {
+	async function downloadRestaurants() {
 		try {
-			const {data} = await axios.get("https://api.yelp.com/v3/businesses/search?location=Albuquerque", {headers: {   Authorization:  }})
+			console.log(process.env)
+			const {data} = await axios.get("https://api.yelp.com/v3/businesses/search?location=Albuquerque", {headers: {   Authorization: `BEARER ${process.env.BEARER}` }})
+
             /*console.log(data)*/
 			const createRestaurants = (array: any) : Restaurant[] => {
 				console.log(array)
@@ -36,13 +39,16 @@ function dataDownloader() : Promise<any> {
 				const  restaurants : Restaurant[] = []
 				for(const currentRestaurant of array.businesses) {
 					const restaurantAddress = `${currentRestaurant.location.address1}, ${currentRestaurant.location.city}, ${currentRestaurant.location.state}, ${currentRestaurant.location.zip_code}`
-					console.log(currentRestaurant)
+					const restaurantServices = currentRestaurant.transactions.join(" ")
+
 					// TODO grab all necessary attributes from Yelp and put them into Restaurant object
 					// TODO write insertRestaurant MYSQL enabled function, Write in TS
 					// TODO call insertRestaurant function and pass Restaurant as an argument
-					let restaurant : Restaurant = {restaurantId: null, restaurantAddress, restaurantImage: currentRestaurant.image_url, restaurantName: currentRestaurant.name, restaurantPhone: currentRestaurant.display_phone, restaurantServices: currentRestaurant.transactions, restaurantYelpRating: currentRestaurant.rating, restaurantZip: currentRestaurant.location.zip_code}
+					let restaurant : Restaurant = {restaurantId: null, restaurantAddress, restaurantImage: currentRestaurant.image_url, restaurantName: currentRestaurant.name, restaurantPhone: currentRestaurant.display_phone, restaurantServices, restaurantYelpRating: currentRestaurant.rating, restaurantZip: currentRestaurant.location.zip_code}
 					/*call function insertRestaurant(Restaurant)*/
 					console.log(restaurant)
+					insertRestaurant(restaurant)
+
 				}
 				return restaurants
 			}
@@ -50,9 +56,9 @@ function dataDownloader() : Promise<any> {
 			createRestaurants(data)
 
 		} catch (error) {
-			console.error(error)
+			console.error(error.message)
 		}
 	}
 }
 
-dataDownloader().catch(error => console.error(error))
+dataDownloaderRestaurant().catch(error => console.error(error));

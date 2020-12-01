@@ -7,5 +7,4 @@ export interface Restaurant {
     restaurantServices: string;
     restaurantYelpRating: number;
     restaurantZip: string;
-
 }
