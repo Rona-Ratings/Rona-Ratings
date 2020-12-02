@@ -8,7 +8,7 @@ export const RestaurantHome= () => (
 
 
 
-    <section class="landing-page">
+
         <div class="container">
             <div class="col-lg-12">
             <div class="row">
@@ -25,8 +25,33 @@ export const RestaurantHome= () => (
 
                 </div>
                 <div className="row d-flex justify-content-center">
-                    <form></form>
+                    <div class="column-lg-6">
+                    <form>
+                        <div className="form-group">
+                            <label htmlFor="exampleInputEmail1">Email address</label>
+                            <input type="email" className="form-control" id="exampleInputEmail1"/>
+                                   aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" className="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                        </div>
+                    </form>
+                        </div>
+
+                    <div class="col-lg-6">
+                        <form>
+                        <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">Type</label>
+                            <input type="password" className="form-control" id="exampleInputPassword1"
+                                   placeholder="Password"/>
+                        </div>
+                        <div className="form-group form-check">
+                            <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+                                <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
                 </div>
+            </div>
 
 
 
@@ -67,7 +92,7 @@ export const RestaurantHome= () => (
 
 
 
-    </section>
+
 
 
 

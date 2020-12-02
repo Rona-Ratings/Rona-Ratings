@@ -1,8 +1,13 @@
 /*Base*/
 
+
+
+
 #logo {
     display: flex;
     justify-content: center;
+    max-width: 70%;
+    max-height: 70%;
 }
 
 *{
