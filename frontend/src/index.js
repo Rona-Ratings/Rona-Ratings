@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
 import {App} from "./ui/App"
 import 'bootstrap/dist/css/bootstrap.css';
-
-ReactDOM.render(App(), document.querySelector('#root'));
+import store from "./ui/store/store"
+ReactDOM.render(App(store), document.querySelector('#root'));

@@ -7,9 +7,14 @@ import {RestaurantDetails} from "./restaurant-details/restaurant-details";
 import { RestaurantListings } from "./restaurant-listings/restaurant-listings";
 import { RestaurantHome} from "./restaurant-home/restaurant-home";
 import "./restaurant-home/restaurant-home.css"
-export const App = () => (
+import {MainNav} from "./MainNav/MainNav";
+import {Provider} from "react-redux";
+
+export const App = (store) => (
     <>
+        <Provider store={store}>
         <BrowserRouter>
+            <MainNav/>
             <Switch>
                 <Route exact path="/restaurant-details" component={RestaurantDetails}/>
                 <Route exact path="/restaurant-listings" component={RestaurantListings}/>
@@ -18,6 +23,7 @@ export const App = () => (
                 <Route component={FourOhFour} />
             </Switch>
         </BrowserRouter>
+        </Provider>
 
     </>
 )
