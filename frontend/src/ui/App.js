@@ -8,9 +8,11 @@ import { RestaurantListings } from "./restaurant-listings/restaurant-listings";
 import { RestaurantHome} from "./restaurant-home/restaurant-home";
 import "./restaurant-home/restaurant-home.css"
 import {MainNav} from "./MainNav/MainNav";
+import {Provider} from "react-redux";
 
-export const App = () => (
+export const App = (store) => (
     <>
+        <Provider store={store}>
         <BrowserRouter>
             <MainNav/>
             <Switch>
@@ -21,7 +23,7 @@ export const App = () => (
                 <Route component={FourOhFour} />
             </Switch>
         </BrowserRouter>
-
+        </Provider>
 
     </>
 )
