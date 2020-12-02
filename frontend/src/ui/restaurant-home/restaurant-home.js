@@ -5,52 +5,32 @@ import Logo from './logo-ws.png'
 export const RestaurantHome= () => (
 
     <>
-    <header>
-        <div class="container">
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">List of Restaurants</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">About us</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
 
 
     <section class="landing-page">
         <div class="container">
             <div class="col-lg-12">
             <div class="row">
-            <div class="content">
-                <div class="content-details">
 
-                    <img src={Logo} alt="placeholder" id="logo"/>
+
+
                 </div>
-                <div class="row">
-                    <h1 class="title">Rona Ratings</h1>
+                <div class="row d-flex justify-content-center">
+                    <img src={Logo} alt="placeholder" id="logo"/>
+
                     <p class="description"> Welcome to Rona Ratings! Are you in search of a popular Albuquerque restaurant
                         and are concerned about
                         Covid-19 infections in the area? Enter your zipcode below! </p>
+
                 </div>
-            </div>
+                <div className="row d-flex justify-content-center">
+                    <form></form>
+                </div>
 
 
 
 
-                    <div class="search">
-
-                        <input type="text" class="search-bar" placeholder="zip code"/>
-
-                            <input class="button" type="button" value="Search"/>
-
-                    </div>
                     <div class="sm-list">
                         <a href="#" class="sm-link">
                             <i class="fab fa-twitter"></i>
@@ -82,7 +62,7 @@ export const RestaurantHome= () => (
                     </div>
                 </div>
             </div>
-        </div>
+
 
 
 
