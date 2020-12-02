@@ -1,0 +1,18 @@
+import {connect} from "../database.utils";
+
+
+/**
+ * Helper function that grabs all misquotes
+ **/
+export async function selectAllRestaurants() {
+    try {
+
+        const mysqlConnection = await connect()
+        const mySqlQuery = "SELECT BIN_TO_UUID(restaurantId) AS restaurantId, restaurantAddress, restaurantImage, restaurantName, restaurantPhone, restaurantServices, restaurantYelpRating, restaurantZip FROM restaurant"
+        const [rows] = await mysqlConnection.execute(mySqlQuery)
+        return rows
+    } catch (error) {
+        console.log(error)
+        return undefined
+    }
+}

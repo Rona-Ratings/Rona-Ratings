@@ -7,8 +7,5 @@ export interface Restaurant {
     restaurantServices: string;
     restaurantYelpRating: number;
     restaurantZip: string;
-<<<<<<< HEAD
-=======
 
->>>>>>> sprint-3
 }
