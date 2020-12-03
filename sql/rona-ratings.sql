@@ -1,11 +1,12 @@
-drop table if exists RestaurantRonaRating;
-drop table if exists RonaRatings;
-drop table if exists RestaurantCategories;
-drop table if exists Restaurant;
-drop table if exists Profile;
-drop table if exists Categories;
+drop table if exists restaurantRonaRating;
+drop table if exists ronaRatings;
+drop table if exists restaurantCategory;
+drop table if exists restaurant;
+drop table if exists profile;
+drop table if exists category;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ drop table if exists Categories;
 >>>>>>> 9a2b180... push category
 =======
 >>>>>>> c0b8384... changed password to 98 char
+=======
+>>>>>>> 1fdd015... rebased with sign-up-apis
 create table category(
 categoryId binary(16) not null,
 categoryType varchar(50),
@@ -71,6 +74,7 @@ ronaRatingsTotalScore int (6) not null,
 foreign key (ronaRatingsProfileId) references profile (profileId),
 foreign key (ronaRatingsRestaurantId) references restaurant (restaurantId)
 );
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -275,4 +279,7 @@ foreign key (ronaRatingsRestaurantId) references restaurant (restaurantId)
 >>>>>>> 5c1a0ed... changed password to 98 char
 >>>>>>> 4cd59ff... changed password to 98 char
 >>>>>>> c0b8384... changed password to 98 char
+=======
+
+>>>>>>> 1fdd015... rebased with sign-up-apis
 
