@@ -42,7 +42,7 @@ export const RestaurantHome= () => (
                         <div className="form-group">
                             <label htmlFor="exampleInputPassword1">Type</label>
                             <input type="password" className="form-control" id="exampleInputPassword1"
-                                   placeholder="Password"/>
+                                   placeholder=""/>
                         </div>
                         <div className="form-group form-check">
                             <input type="checkbox" className="form-check-input" id="exampleCheck1"/>

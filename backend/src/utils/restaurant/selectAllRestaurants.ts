@@ -1,9 +1,7 @@
 import {connect} from "../database.utils";
 
 
-/**
- * Helper function that grabs all misquotes
- **/
+
 export async function selectAllRestaurants() {
     try {
 
