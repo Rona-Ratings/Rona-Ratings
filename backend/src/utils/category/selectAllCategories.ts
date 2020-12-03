@@ -6,7 +6,7 @@ import {Status} from "../interfaces/Status";
 /**
  * Helper function that grabs all misquotes
  **/
-export async function selectCategoryByCategoryId() {
+export async function selectAllCategories() {
     try {
 
         const mysqlConnection = await connect()
