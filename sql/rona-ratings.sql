@@ -16,7 +16,7 @@ primary key (categoryId)
 create table profile(
 profileId binary (16),
 profileEmail varchar(128),
-profilePass varchar(50),
+profilePass varchar(98),
 profileUserName varchar(60),
 profileActivationToken varchar(128),
 unique(profileEmail),

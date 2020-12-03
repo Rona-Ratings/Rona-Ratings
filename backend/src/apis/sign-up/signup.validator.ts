@@ -1,5 +1,5 @@
 export const signupValidator = {
-    profileAtHandle: {
+    profileUserName: {
         escape: true,
         trim: true,
         isLength: {
@@ -7,14 +7,8 @@ export const signupValidator = {
             options: {min:1, max: 32 }
         }
     },
-    profileAvatarUrl: {
-        optional: {
-            nullable: true
-        },
-        isURL: {
-            errorMessage: "profile avatar is malformed please upload a new image"
-        }
-    },
+
+
     profileEmail: {
         isEmail: {
             errorMessage: 'Please provide a valid email'
@@ -39,14 +33,5 @@ export const signupValidator = {
         trim: true,
         escape: true
     },
-    profilePhone: {
-        isMobilePhone: {
-            errorMessage: "please provide a valid mobile phone number"
-        },
-        optional: {
-            options: {
-                nullable: true
-            }
-        }
-    }
+
 };
