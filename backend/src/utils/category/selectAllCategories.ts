@@ -10,7 +10,7 @@ export async function selectAllCategories() {
     try {
 
         const mysqlConnection = await connect()
-        const mySqlQuery = "Select categoryId, categoryType from category"
+        const mySqlQuery = "Select BIN_TO_UUID(categoryId) AS categoryId, categoryType from category"
         const [rows] = await mysqlConnection.execute(mySqlQuery)
         return rows
     } catch (error) {
