@@ -4,10 +4,17 @@ import morgan from 'morgan'
 import { indexRoute } from './apis/index.route'
 import restaurantRouter from "./apis/restaurant/restaurant.route";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import categoryRoute from "./apis/category/category.route";
 =======
 import {signUpRouter} from "./apis/sign-up/signup.route";
 >>>>>>> 989dad0... sign up
+=======
+import {signUpRouter} from "./apis/sign-up/signup.route";
+=======
+import categoryRoute from "./apis/category/category.route";
+>>>>>>> 4af0cc4... fix category
+>>>>>>> b6e443b... fix category
 
 // The following class creates the app and instantiates the server
 export class App {
@@ -38,10 +45,17 @@ export class App {
         this.app.use('/apis', indexRoute)
         this.app.use('/apis/restaurant', restaurantRouter)
 <<<<<<< HEAD
+<<<<<<< HEAD
         this.app.use('/apis/category', categoryRoute)
 =======
         this.app.use('/apis/sign-up',signUpRouter )
 >>>>>>> 989dad0... sign up
+=======
+        this.app.use('/apis/sign-up',signUpRouter )
+=======
+        this.app.use('/apis/category', categoryRoute)
+>>>>>>> 4af0cc4... fix category
+>>>>>>> b6e443b... fix category
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
