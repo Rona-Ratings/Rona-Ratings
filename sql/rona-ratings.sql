@@ -8,6 +8,9 @@ drop table if exists Categories;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9a2b180... push category
 create table category(
 categoryId binary(16) not null,
 categoryType varchar(50),
@@ -66,8 +69,11 @@ foreign key (ronaRatingsProfileId) references profile (profileId),
 foreign key (ronaRatingsRestaurantId) references restaurant (restaurantId)
 );
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 5c1a0ed... changed password to 98 char
+=======
+>>>>>>> 9a2b180... push category
 # create table category(
 # categoryId binary(16) not null,
 # categoryType varchar(50),
@@ -125,6 +131,7 @@ foreign key (ronaRatingsRestaurantId) references restaurant (restaurantId)
 # foreign key (ronaRatingsProfileId) references profile (profileId),
 # foreign key (ronaRatingsRestaurantId) references restaurant (restaurantId)
 # );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/catagory-api
 =======
@@ -188,4 +195,7 @@ foreign key (ronaRatingsRestaurantId) references restaurant (restaurantId)
 );
 >>>>>>> 75a5e60... changed password to 98 char
 >>>>>>> 5c1a0ed... changed password to 98 char
+=======
+>>>>>>> 9c7df57... push category
+>>>>>>> 9a2b180... push category
 

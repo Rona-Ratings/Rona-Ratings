@@ -16,4 +16,8 @@ export const asyncValidatorController = (validations : any) => {
 };
 =======
 };
+<<<<<<< HEAD
 >>>>>>> 989dad0... sign up
+=======
+>>>>>>> 9c7df57... push category
+>>>>>>> 9a2b180... push category
