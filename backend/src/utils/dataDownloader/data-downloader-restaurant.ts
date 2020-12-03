@@ -1,7 +1,7 @@
 import axios from "axios"
 import {Restaurant} from "../interfaces/Restaurant";
 import {insertRestaurant} from "../restaurant/insertRestaurant";
-import {insertCategory} from "../category/insertRestaurant";
+import {insertCategory} from "../category/insertCategory";
 import {Category} from "../interfaces/Category";
 import {v4 as uuidv4} from 'uuid'
 
