@@ -1,12 +1,10 @@
-import {getCategoryByCategoryId} from "./category.controller";
+import {getAllCategories, getCategoryByCategoryId} from "./category.controller";
 import {Router} from "express";
 import {asyncValidatorController} from "../../utils/controllers/asyncValidator.controller";
-import {check, checkSchema} from "express-validator";
-import {selectAllRestaurants} from "../../utils/restaurant/selectAllRestaurants";
+import {check} from "express-validator";
 
 export const categoryRoute = Router();
-categoryRoute.route('/').get(selectAllRestaurants)
-
+categoryRoute.route('/').get(getAllCategories)
 
 categoryRoute.route("/:categoryId")
     .get(
@@ -15,3 +13,5 @@ categoryRoute.route("/:categoryId")
         ])
         , getCategoryByCategoryId
     )
+
+export default categoryRoute

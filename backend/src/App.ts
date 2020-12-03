@@ -3,6 +3,7 @@ import morgan from 'morgan'
 // Routes
 import { indexRoute } from './apis/index.route'
 import restaurantRouter from "./apis/restaurant/restaurant.route";
+import categoryRoute from "./apis/category/category.route";
 
 // The following class creates the app and instantiates the server
 export class App {
@@ -30,9 +31,9 @@ export class App {
 
     // private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
     private routes () {
-        // TODO add "/apis"
         this.app.use('/apis', indexRoute)
         this.app.use('/apis/restaurant', restaurantRouter)
+        this.app.use('/apis/category', categoryRoute)
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
