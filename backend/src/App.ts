@@ -4,6 +4,7 @@ import morgan from 'morgan'
 import { indexRoute } from './apis/index.route'
 import restaurantRouter from "./apis/restaurant/restaurant.route";
 import categoryRoute from "./apis/category/category.route";
+import {SignOutRoute} from "./apis/sign-out/sign-out.route";
 
 // The following class creates the app and instantiates the server
 export class App {
@@ -34,6 +35,7 @@ export class App {
         this.app.use('/apis', indexRoute)
         this.app.use('/apis/restaurant', restaurantRouter)
         this.app.use('/apis/category', categoryRoute)
+        this.app.use('/apis/category', SignOutRoute)
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
