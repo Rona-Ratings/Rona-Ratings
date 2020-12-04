@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import {getAllRonaReviewController, getRonaReviewByRonaReviewProfileIdController, postRonaReview} from './RonaReview.controller';
+import {getAllRonaReviewController, getRonaReviewByRonaReviewProfileIdController, postRonaReview} from './ronaRating.controller';
 import { asyncValidatorController } from '../../utils/controllers/asyncValidator.controller';
 import { RonaReviewValidator } from './RonaReview.validator';
 import {isLoggedIn} from "../../utils/controllers/isLoggedIn.controller";
