@@ -2,7 +2,7 @@ import {connect} from "../database.utils";
 
 
 
-export async function selectAllRestaurants() {
+export async function selectRestaurantsByZip() {
     try {
 
         const mysqlConnection = await connect()
