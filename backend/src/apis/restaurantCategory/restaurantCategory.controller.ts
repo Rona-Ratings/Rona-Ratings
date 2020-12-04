@@ -1,13 +1,12 @@
 import {NextFunction, Request, Response} from "express";
 import {Status} from "../../utils/interfaces/Status";
-import {selectAllRestaurants} from "../../utils/restaurant/selectAllRestaurants";
-import {selectCategoryByCategoryId} from "../../utils/category/selectCategoryByCategoryId";
+import {selectRestaurantCategoryByCategoryId} from "../../utils/restaurantCategory/selectRestaurantCategoryByCategoryId";
 
 
 export async function getRestaurantCategoryByCategoryId(request: Request, response: Response) : Promise<Response> {
     try {
         const {categoryId} = request.params
-        const mySqlResult = await selectCategoryByCategoryId(categoryId);
+        const mySqlResult = await selectRestaurantCategoryByCategoryId(categoryId);
         const data = mySqlResult ?? null
         const status: Status = {status: 200, data, message: null}
         return response.json(status)
