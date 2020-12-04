@@ -2,8 +2,7 @@ import express, { Application } from 'express'
 import morgan from 'morgan'
 // Routes
 import { indexRoute } from './apis/index.route'
-import restaurantRouter from "./apis/restaurant/restaurant.route";
-
+import restaurantRouter from "./apis/restaurant/GetAllRestaurants/restaurant.route";
 import {signUpRouter} from "./apis/sign-up/signup.route";
 import categoryRoute from "./apis/category/category.route";
 
@@ -38,6 +37,7 @@ export class App {
         this.app.use('/apis/restaurant', restaurantRouter)
         this.app.use('/apis/category', categoryRoute)
         this.app.use('/apis/sign-up',signUpRouter )
+
 
     }
 

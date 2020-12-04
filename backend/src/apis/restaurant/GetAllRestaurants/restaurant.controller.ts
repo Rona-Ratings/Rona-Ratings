@@ -1,6 +1,6 @@
 import {NextFunction, Request, Response} from "express";
-import {Status} from "../../utils/interfaces/Status";
-import {selectAllRestaurants} from "../../utils/restaurant/selectAllRestaurants";
+import {Status} from "../../../utils/interfaces/Status";
+import {selectAllRestaurants} from "../../../utils/restaurant/selectAllRestaurants";
 
 
 export async function getAllRestaurantsController(request: Request, response: Response, nextFunction: NextFunction) {
