@@ -8,7 +8,6 @@ export async function selectCategoryByCategoryId(categoryId:string) {
     try {
 
         const mysqlConnection = await connect()
-
         const mySqlQuery = "SELECT BIN_TO_UUID(categoryId) AS categoryId, categoryType FROM category WHERE BIN_TO_UUID(categoryId) = :categoryId"
         const [rows] = await mysqlConnection.execute(mySqlQuery, {categoryId})
 
