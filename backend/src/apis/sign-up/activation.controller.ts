@@ -2,6 +2,7 @@ import {NextFunction, Request, Response} from "express";
 
 import {Profile} from "../../utils/interfaces/Profile";
 import {selectProfileByProfileActivationToken} from "../../utils/profile/selectProfileByActivationToken";
+import {updateProfile} from "../../utils/profile/updateProfile";
 
 
 
