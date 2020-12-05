@@ -1,19 +1,19 @@
 import {Request, Response, NextFunction} from 'express';
 
 // Interfaces (represent the DB model and types of the columns associated with a specific DB table)
-import {RonaReview} from '../../utils/interfaces/RonaReview';
+import {RonaReview} from '../../utils/interfaces/RonaRatings';
 import {Status} from '../../utils/interfaces/Status';
 import {Profile} from "../../utils/interfaces/Profile";
-import {insertronaReview} from "../../utils/RonaReview/insertRonaReviews"
-import {selectAllRonaReview} from "../../utils/RonaReview/selectAllRonaReview";
-import {selectRonaReviewByRonaReviewProfileId} from "../../utils/RonaReview/selectRonaReviewsByRonaReviewProfileId";
+import {insertRonaRating} from "../../utils/RonaRating/insertRonaRating"
+import {selectAllRonaRatings} from "../../utils/RonaRating/selectAllRonaRatings";
+import {selectRonaRatingByRonaRatingProfileId} from "../../utils/RonaRating/selectRonaRatingByRonaRatingProfileId";
 
 const {validationResult} = require('express-validator');
 
 export async function getAllRonaReviewController(request: Request, response: Response): Promise<Response | void> {
 
     try {
-        const data = await selectAllRonaReview()
+        const data = await selectAllRonaRatings()
         // return the response
         const status: Status = {status: 200, message: null, data};
         return response.json(status);
@@ -22,13 +22,13 @@ export async function getAllRonaReviewController(request: Request, response: Res
     }
 }
 
-export async function getRonaReviewByRonaReviewProfileIdController(request : Request, response: Response, nextFunction: NextFunction){
+export async function getRonaRatingByRonaRatingProfileIdController(request : Request, response: Response, nextFunction: NextFunction){
     const     {ronaReviewProfileId} = request.params
     const data  = await selectRonaReviewByRonaReviewProfileId(ronaReviewProfileId)
     return response.json({status:200, message: null, data})
 }
 
-export async function postRonaReview(request: Request, response: Response) {
+export async function postRonaRating(request: Request, response: Response) {
     try {
 
         const {RonaReviewContent} = request.body;

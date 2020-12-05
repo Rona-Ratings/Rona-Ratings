@@ -2,13 +2,19 @@ import express, { Application } from 'express'
 import morgan from 'morgan'
 // Routes
 import { indexRoute } from './apis/index.route'
-import restaurantRouter from "./apis/restaurant/restaurant.route";
+
+
+
+
+import {restaurantRouter} from "./apis/restaurant/GetAllRestaurants/restaurant.route";
 
 import {signUpRouter} from "./apis/sign-up/signup.route";
-import categoryRoute from "./apis/category/category.route";
+import {categoryRoute} from "./apis/category/category.route";
+import {restaurantByZipRouter} from "./apis/restaurant/GetRestaurantsByZip/restaurantByZip.route";
 
 
 const session = require("express-session");
+
 import passport = require('passport');
 
 const MemoryStore = require('memorystore')(session);
@@ -16,6 +22,7 @@ const MemoryStore = require('memorystore')(session);
 import {passportStrategy} from "./apis/sign-in/sign-in.controller";
 import {SignInRouter} from "./apis/sign-in/sign-in.route";
 import {ProfileRoute} from "./apis/profile/profile.route";
+
 
 
 
@@ -70,6 +77,7 @@ export class App {
         this.app.use('/apis/sign-in',SignInRouter )
         this.app.use('/apis/sign-up',signUpRouter )
         this.app.use('/apis/profile',ProfileRoute )
+        this.app.use('apis/restaurant/GetRestaurantsByZip', restaurantByZipRouter)
 
 
 

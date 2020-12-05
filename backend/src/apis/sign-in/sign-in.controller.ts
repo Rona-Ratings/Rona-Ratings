@@ -6,7 +6,7 @@ import uuid from "uuid";
 import {generateJwt, validatePassword} from '../../utils/auth.utils';
 import {Profile} from "../../utils/interfaces/Profile";
 import {selectProfileByProfileEmail} from "../../utils/profile/selectProfileByProfileEmail";
-import exp from "constants";
+
 
 export async function signInController(request: Request, response: Response, nextFunction: NextFunction) {
 
@@ -20,9 +20,11 @@ export async function signInController(request: Request, response: Response, nex
             {session: false},
             async (err: any, passportUser: Profile) => {
                 console.log(passportUser)
+
                 const {profileId, profileUserName,  profileEmail, } = passportUser;
                 const signature: string = uuid();
                 const authorization: string = generateJwt({profileId, profileUserName,  profileEmail, }, signature);
+
 
                 const signInFailed = (message: string) => response.json({
                     status: 400,

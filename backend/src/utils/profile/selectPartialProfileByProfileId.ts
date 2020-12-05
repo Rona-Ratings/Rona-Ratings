@@ -5,7 +5,9 @@ export async function selectPartialProfileByProfileId(profileId: string) {
     try {
         const mysqlConnection = await connect();
 
-        const [rows] = await mysqlConnection.execute('SELECT BIN_TO_UUID(profileId) as profileId,  profileUserName, profileEmail   FROM profile WHERE profileId = UUID_TO_BIN(:profileId)', {profileId});
+
+        const [rows] = await mysqlConnection.execute('SELECT BIN_TO_UUID(profileId) as profileId,  profileUserName, profileEmail FROM profile WHERE profileId = UUID_TO_BIN(:profileId)', {profileId});
+
         console.log(rows)
         // @ts-ignore is required so that rows can be interacted with like the array it is
         return rows.length !== 0 ? {...rows[0]} : undefined;
