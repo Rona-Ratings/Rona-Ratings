@@ -1,9 +1,9 @@
 import React from 'react';
-import {httpConfig} from "../../http-config";
 import * as Yup from "yup";
 import {Formik} from "formik";
 
 import {SignUpFormContent} from "./SignUpFormContent";
+import {httpConfig} from "../../../utils/httpConfig";
 
 export const SignUpForm = () => {
     const signUp = {

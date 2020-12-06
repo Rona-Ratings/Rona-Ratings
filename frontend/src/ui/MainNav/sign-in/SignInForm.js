@@ -1,11 +1,11 @@
 import React from 'react';
-import {httpConfig} from "../../http-config";
+import {httpConfig} from "../../../utils/httpConfig";
 import {Formik} from "formik";
 import * as Yup from "yup";
 import {SignInFormContent} from "./SignInFormContent";
 import {useDispatch} from "react-redux";
 import * as jwtDecode from 'jwt-decode'
-import { getAuth } from '../../store/auth'
+
 
 export const SignInForm = () => {
 
@@ -37,7 +37,7 @@ export const SignInForm = () => {
                     window.localStorage.setItem("authorization", reply.headers["authorization"]);
                     resetForm();
                     let jwtToken = jwtDecode(reply.headers["authorization"])
-                    dispatch(getAuth(jwtToken))
+                    // dispatch(getAuth(jwtToken))
                 }
                 setStatus({message, type});
             });

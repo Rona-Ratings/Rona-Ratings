@@ -4,67 +4,34 @@ import React from "react";
 import styles from "./restaurant-listings.module.css"
 import TacoPlaceHolder from './tacos-placeholder.jpg'
 import {Badge} from "react-bootstrap";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchAllRestaurants} from "../../store/restaurants";
+import {RestaurantCard} from "./RestaurantCard";
 
 
 export const RestaurantListings = () => {
+const restaurants= useSelector((store)=> {
+    console.log(store)
+    return store.restaurants ? store.restaurants : []
+})
+    const dispatch= useDispatch()
 
+    const initialEffects =() => {
+    dispatch (fetchAllRestaurants())
+    }
+    React.useEffect(initialEffects, [dispatch])
+    console.log(restaurants)
 
         return (
             <>
-                <div className="container">
-                    <nav className="nav">
-                        <a href="" className="logo-box">
-                            <img src="" alt="" className="logo"/>
-                        </a>
-                        <ul className="nav-list">
-                            <li className="nav-item">
-                                <a href="#" className="nav-link">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a href="#" className="nav-link">List of Restaurants</a>
-                            </li>
-                            <li className="nav-item">
-                                <a href="#" className="nav-link">maps</a>
-                            </li>
-                            <li className="nav-item">
-                                <a href="#" className="nav-link">About us</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+
 
             <div className="container">
                 <div className="row d-flex justify-content-center">
                     <div className="col-lg-12 px-0">
-                        <div className="card">
-                            <div className={styles.cardHeader}>
-                                <div className="card-header">
-                                    Taco Juan's Taco Shop
-                                </div>
-                            </div>
-                                <div className="col-lg-12">
-                                    <div className="row">
-                                        <div className="col-lg-3 d-flex justify-content-center">
-                                            <img src={TacoPlaceHolder} className="card-img" alt="placeholder" />
-                                        </div>
-                                        <div className="col-lg-9 d-flex align-items-center">
-                                            <div className="card-body">
-                                                <h3 className="card-title">Restaurant Information:</h3>
-                                                <p className="card-text">
-                                                <h4>Address and Hours:UNM Carri Tingley Hospital -</h4>
-                                                <p>1127 University Blvd, NE Albuquerque, NM 87102 Friday 8:00am - 2:00pm</p>
-                                                <h4>contact Information:</h4>
-                                                    <ul>
-                                                <li>Phone Number:505-319-5619</li>
-                                                <li>Delivery Option: Yes with a perches of $20.00 or more.</li>
-                                                <li>Patio Option: Yes</li>
-                                                    </ul>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
+                        {restaurants.map(restaurant => (
+                            <RestaurantCard restaurant = {restaurant} key ={restaurant.restaurantId} />))
+                        }
                     </div>
                 </div>
             </div>
