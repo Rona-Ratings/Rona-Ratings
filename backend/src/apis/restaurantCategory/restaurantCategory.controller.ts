@@ -1,9 +1,9 @@
-git import {NextFunction, Request, Response} from "express";
+import {NextFunction, Request, Response} from "express";
 import {Status} from "../../utils/interfaces/Status";
 import {selectRestaurantCategoryByCategoryId} from "../../utils/restaurantCategory/selectRestaurantCategoryByCategoryId";
 
 
-export async function getRestaurantCategoryByCategoryId(request: Request, response: Response) : Promise<Response> {
+export async function getRestaurantCategoryByCategoryIdController(request: Request, response: Response) : Promise<Response> {
     try {
         const {categoryId} = request.params
         const mySqlResult = await selectRestaurantCategoryByCategoryId(categoryId);

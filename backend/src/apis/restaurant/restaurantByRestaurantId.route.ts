@@ -1,14 +1,14 @@
 import { Router } from 'express';
-import {getRestaurantsByZipController} from "./restaurantByZip.controller";
+import {selectRestaurantByRestaurantIdController} from "./restaurant.controller";
 
 
 
 
-export const restaurantByZipRouter = Router();
+
+export const restaurantByRestaurantIdRouter = Router();
 
 //router.route("/RestaurantZipCode/:RestaurantZipCode").get(getRestaurantsByRestaurantZipCodeController)
 
 // Every new route is instantiated below. It will include the controller name and the type of action (get, post, delete, put, patch)
-restaurantByZipRouter.route('/')
-    .get(getRestaurantsByZipController)
-
+restaurantByRestaurantIdRouter.route('/')
+    .get(selectRestaurantByRestaurantIdController)

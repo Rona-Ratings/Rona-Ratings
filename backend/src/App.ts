@@ -2,16 +2,10 @@ import express, { Application } from 'express'
 import morgan from 'morgan'
 // Routes
 import { indexRoute } from './apis/index.route'
-
-
-
-
-import {restaurantRouter} from "./apis/restaurant/GetAllRestaurants/restaurant.route";
-
+import {getAllRestaurantsRouter} from "./apis/restaurant/getAllRestaurants.route";
 import {signUpRouter} from "./apis/sign-up/signup.route";
 import {categoryRoute} from "./apis/category/category.route";
-import {restaurantByZipRouter} from "./apis/restaurant/GetRestaurantsByZip/restaurantByZip.route";
-
+import {restaurantByZipRouter} from "./apis/restaurant/restaurantByZip.route";
 
 const session = require("express-session");
 
@@ -22,6 +16,8 @@ const MemoryStore = require('memorystore')(session);
 import {passportStrategy} from "./apis/sign-in/sign-in.controller";
 import {SignInRouter} from "./apis/sign-in/sign-in.route";
 import {ProfileRoute} from "./apis/profile/profile.route";
+
+import RestaurantCategoryByCategoryIdRouter from "./apis/restaurantCategory/restaurantCategory.route";
 
 
 
@@ -70,7 +66,7 @@ export class App {
     // private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
     private routes () {
         this.app.use('/apis', indexRoute)
-        this.app.use('/apis/restaurant', restaurantRouter)
+        this.app.use('/apis/restaurant', getAllRestaurantsRouter)
         this.app.use('/apis/category', categoryRoute)
 
 
@@ -78,6 +74,7 @@ export class App {
         this.app.use('/apis/sign-up',signUpRouter )
         this.app.use('/apis/profile',ProfileRoute )
         this.app.use('apis/restaurant/GetRestaurantsByZip', restaurantByZipRouter)
+        this.app.use('apis/restaurantCategory', RestaurantCategoryByCategoryIdRouter)
 
 
 
