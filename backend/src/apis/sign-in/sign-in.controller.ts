@@ -6,7 +6,7 @@ import uuid from "uuid";
 import {generateJwt, validatePassword} from '../../utils/auth.utils';
 import {Profile} from "../../utils/interfaces/Profile";
 import {selectProfileByProfileEmail} from "../../utils/profile/selectProfileByProfileEmail";
-import exp from "constants";
+
 
 export async function signInController(request: Request, response: Response, nextFunction: NextFunction) {
 
@@ -20,9 +20,11 @@ export async function signInController(request: Request, response: Response, nex
             {session: false},
             async (err: any, passportUser: Profile) => {
                 console.log(passportUser)
-                const {profileId, profileAtHandle, profileAvatarUrl, profileEmail, profilePhone} = passportUser;
+
+                const {profileId, profileUserName,  profileEmail, } = passportUser;
                 const signature: string = uuid();
-                const authorization: string = generateJwt({profileId, profileAtHandle, profileAvatarUrl, profileEmail, profilePhone}, signature);
+                const authorization: string = generateJwt({profileId, profileUserName,  profileEmail, }, signature);
+
 
                 const signInFailed = (message: string) => response.json({
                     status: 400,
@@ -38,8 +40,11 @@ export async function signInController(request: Request, response: Response, nex
                     // }
 
                     if (request.session) {
+                        // @ts-ignore
                         request.session.profile = passportUser;
+                        // @ts-ignore
                         request.session.jwt = authorization;
+                        // @ts-ignore
                         request.session.signature = signature;
                     }
 
@@ -51,7 +56,7 @@ export async function signInController(request: Request, response: Response, nex
                 };
 
 
-                const isPasswordValid: boolean = passportUser && await validatePassword(passportUser.profileHash, profilePassword);
+                const isPasswordValid: boolean = passportUser && await validatePassword(passportUser.profilePass, profilePassword);
 
                 return isPasswordValid ? signInSuccessful() : signInFailed("Invalid email or password");
             })(request, response, nextFunction)

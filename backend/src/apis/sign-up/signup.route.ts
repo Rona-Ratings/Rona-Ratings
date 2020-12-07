@@ -17,9 +17,11 @@ signUpRouter.route('/')
         signupProfile
     );
 
-// signUpRouter.route('/activation/:activation')
-//     .get(
-//         asyncValidatorController([param("activation", "invalid activation link").isHexadecimal().notEmpty()]),
-//         activationController
-//     )
+
+signUpRouter.route('/activation/:activation')
+    .get(
+        asyncValidatorController([param("activation", "invalid activation link").isHexadecimal().notEmpty()]),
+        activationController
+    )
+
 

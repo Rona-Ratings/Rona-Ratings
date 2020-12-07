@@ -20,7 +20,7 @@ export async function signupProfile(request: Request, response: Response) : Prom
         const {profileUserName, profileEmail,  profilePassword} = request.body;
         const profilePass = await setHash(profilePassword);
         const profileActivationToken = setActivationToken();
-        const basePath = `${request.protocol}://${request.get('host')}${request.originalUrl}activation/${profileActivationToken}`
+        const basePath = `${request.protocol}://${request.get('host')}${request.originalUrl}/activation/${profileActivationToken}`
         console.log(profileActivationToken)
 
         const message = `<h2>Welcome to Rona Ratings!</h2>

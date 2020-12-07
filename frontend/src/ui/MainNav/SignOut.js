@@ -1,7 +1,6 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import { httpConfig } from '../http-config'
-import { getAuth } from '../store/auth'
+import { httpConfig } from '../../utils/httpConfig'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const SignOutComponent = () => {
@@ -11,7 +10,7 @@ export const SignOutComponent = () => {
 
             if (reply.status === 200) {
                 window.localStorage.removeItem('authorization')
-                dispatch(getAuth(null))
+                // dispatch(getAuth(null))
                 window.location = '/'
 
             }

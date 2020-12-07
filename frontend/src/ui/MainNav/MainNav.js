@@ -9,7 +9,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchAuth} from "../store/auth";
+
 import { SignOutComponent } from './SignOut'
 
 
@@ -18,7 +18,7 @@ export const MainNav = (props) => {
     const auth = useSelector(state => state.auth);
     const dispatch = useDispatch()
     const effects = () => {
-        dispatch(fetchAuth());
+        // dispatch(fetchAuth());
     };
     const inputs = [];
     useEffect(effects, inputs);
