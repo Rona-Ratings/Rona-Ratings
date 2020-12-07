@@ -3,6 +3,7 @@ import {Status} from "../../utils/interfaces/Status";
 import {selectAllRestaurants} from "../../utils/restaurant/selectAllRestaurants";
 import {selectRestaurantsByZip} from "../../utils/restaurant/selectRestaurantByZip";
 import {selectRestaurantByRestaurantId} from "../../utils/restaurant/selectRestaurantByRestaurantId";
+import {selectRestaurantByCategoryId} from "../../utils/restaurantCategory/selectRestaurantCategoryByCategoryId";
 
 
 
@@ -19,7 +20,7 @@ export async function getAllRestaurantsController(request: Request, response: Re
 
 export async function getRestaurantsByZipController(request: Request, response: Response, nextFunction: NextFunction) {
     try {
-        const {restaurantZip} = request.body
+        const {restaurantZip} = request.params
         const data = await selectRestaurantsByZip(restaurantZip)
         console.log(data)
         const status: Status = {status: 200, data, message: null}
@@ -29,9 +30,26 @@ export async function getRestaurantsByZipController(request: Request, response: 
     }
 }
 
-export async function selectRestaurantByRestaurantIdController(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getRestaurantCategoryByCategoryIdController(request: Request, response: Response) : Promise<Response> {
     try {
-        const data = await selectRestaurantByRestaurantId()
+        const {categoryId} = request.params
+        const mySqlResult = await selectRestaurantByCategoryId(categoryId);
+        const data = mySqlResult ?? null
+        const status: Status = {status: 200, data, message: null}
+        return response.json(status)
+    } catch (error) {
+        return(response.json({status: 400, data: null, message: error.message}))
+
+    }
+
+}
+
+export async function getRestaurantByRestaurantIdController(request: Request, response: Response, nextFunction: NextFunction) {
+    try {
+        const {
+            restaurantId
+        } = request.params
+        const data = await selectRestaurantByRestaurantId(restaurantId)
         console.log(data)
         const status: Status = {status: 200, data, message: null}
         return response.json(status)
