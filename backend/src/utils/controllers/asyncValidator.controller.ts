@@ -12,12 +12,5 @@ export const asyncValidatorController = (validations : any) => {
         }
         response.json({ status: 418, data: null, message: errors.array()[0].msg });
     };
-<<<<<<< HEAD
 };
-=======
-};
-<<<<<<< HEAD
->>>>>>> 989dad0... sign up
-=======
->>>>>>> 9c7df57... push category
->>>>>>> 9a2b180... push category
+
