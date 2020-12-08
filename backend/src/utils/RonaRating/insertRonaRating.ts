@@ -1,13 +1,13 @@
-import {RonaReview} from "../interfaces/RonaRatings";
+import {RonaRatings} from "../interfaces/RonaRatings";
 import {connect} from "../database.utils";
 
-export async function insertRonaRating(RonaReview: RonaReview) {
+export async function insertRonaRating(ronaRatings : RonaRatings) {
   try {
     const mySqlConnection = await connect()
-    const mySqlQuery = "INSERT INTO RonaRatings(RonaReviewId, RonaReviewProfileId, RonaReviewContent, RonaReviewDate ) VALUES(UUID_TO_BIN(UUID()), UUID_TO_BIN(:RonaReviewProfileId), :RonaReviewContent, NOW())";
+    const mySqlQuery = "INSERT INTO ronaRatings(ronaRatingsProfileId, ronaRatingsRestaurantId, ronaRatingsCumulativeScore, ronaRatingsMaskWearing, ronaRatingsSafeTakeOut, ronaRatingsSixFootRule, ronaRatingsTotalScore) VALUES(UUID_TO_BIN(UUID()), UUID_TO_BIN(UUID()), :RonaRatingContent";
 
-    const [rows] = await mySqlConnection.execute(mySqlQuery, RonaReview)
-    return "Rona Review created successfully"
+    const [rows] = await mySqlConnection.execute(mySqlQuery, RonaRating)
+    return "Rona Rating created successfully"
   } catch (error) {
     console.log(error)
   }
