@@ -7,6 +7,7 @@ export async function insertRestaurantCategory(restaurantCategory: RestaurantCat
         const mySqlConnection = await connect()
         const mySqlQuery = "INSERT INTO restaurantCategory(restaurantCategoriesCategoryId, restaurantCategoriesRestaurantId) VALUES (UUID_TO_BIN(:restaurantCategoriesCategoryId), UUID_TO_BIN(:restaurantCategoriesRestaurantId)) ";
         const [rows] = await mySqlConnection.execute(mySqlQuery, restaurantCategory)
+        await mySqlConnection.end()
         return "Restaurant created successfully"
     } catch (error) {
         console.log(error)

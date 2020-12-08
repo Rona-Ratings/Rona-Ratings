@@ -5,4 +5,8 @@ wsvideo.mp4
 frontend/node_modules
 /conceptual-model.md
 /backend/node_modules
+
 frontend/src/setupProxy.js
+
+/frontend/src/setupProxy.ts
+

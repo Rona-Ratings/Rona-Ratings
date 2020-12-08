@@ -7,6 +7,7 @@ export async function insertRestaurant(restaurant: Restaurant) {
         const mySqlConnection = await connect()
         const mySqlQuery = "INSERT INTO restaurant(restaurantId, restaurantAddress, restaurantImage, restaurantName, restaurantPhone, restaurantServices, restaurantYelpRating, restaurantZip ) VALUES(UUID_TO_BIN(:restaurantId), :restaurantAddress, :restaurantImage, :restaurantName, :restaurantPhone, :restaurantServices, :restaurantYelpRating, :restaurantZip)";
         const [rows] = await mySqlConnection.execute(mySqlQuery, restaurant)
+        await mySqlConnection.end()
         return "Restaurant created successfully"
     } catch (error) {
         console.log(error)

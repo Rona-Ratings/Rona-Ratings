@@ -2,26 +2,16 @@ import express, { Application } from 'express'
 import morgan from 'morgan'
 // Routes
 import { indexRoute } from './apis/index.route'
-
-
-
-
-import {restaurantRouter} from "./apis/restaurant/GetAllRestaurants/restaurant.route";
-
+import {restaurantRoute} from "./apis/restaurant/restaurant.route";
 import {signUpRouter} from "./apis/sign-up/signup.route";
 import {categoryRoute} from "./apis/category/category.route";
-import {restaurantByZipRouter} from "./apis/restaurant/GetRestaurantsByZip/restaurantByZip.route";
-
-
 const session = require("express-session");
-
 import passport = require('passport');
-
 const MemoryStore = require('memorystore')(session);
-
 import {passportStrategy} from "./apis/sign-in/sign-in.controller";
 import {SignInRouter} from "./apis/sign-in/sign-in.route";
 import {ProfileRoute} from "./apis/profile/profile.route";
+
 
 
 
@@ -43,7 +33,7 @@ export class App {
 
     // private method that sets the port for the sever, to one from index.route.ts, and external .env file or defaults to 3000
     public settings () {
-        this.app.set('port', this.port || process.env.PORT || 4200)
+        this.app.set('port', this.port || process.env.PORT || 8080)
     }
 
     // private method to setting up the middleware to handle json responses, one for dev and one for prod
@@ -70,14 +60,13 @@ export class App {
     // private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
     private routes () {
         this.app.use('/apis', indexRoute)
-        this.app.use('/apis/restaurant', restaurantRouter)
+        this.app.use('/apis/restaurant', restaurantRoute)
         this.app.use('/apis/category', categoryRoute)
-
-
         this.app.use('/apis/sign-in',SignInRouter )
         this.app.use('/apis/sign-up',signUpRouter )
         this.app.use('/apis/profile',ProfileRoute )
-        this.app.use('apis/restaurant/GetRestaurantsByZip', restaurantByZipRouter)
+
+
 
 
 

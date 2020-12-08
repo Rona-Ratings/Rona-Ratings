@@ -24,7 +24,7 @@ export async function getAllRonaReviewController(request: Request, response: Res
 
 export async function getRonaRatingByRonaRatingProfileIdController(request : Request, response: Response, nextFunction: NextFunction){
     const     {ronaReviewProfileId} = request.params
-    const data  = await selectRonaReviewByRonaReviewProfileId(ronaReviewProfileId)
+    const data  = await selectRonaReviewByRonaRatingProfileId(ronaRatingProfileId)
     return response.json({status:200, message: null, data})
 }
 
