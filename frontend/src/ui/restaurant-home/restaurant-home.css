@@ -3,12 +3,18 @@
 
 
 
+
 #logo {
     display: flex;
     justify-content: center;
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -215px;
+
+
 }
+
+
 
 *{
     margin: 0;
@@ -20,72 +26,44 @@ html{
     font-size: 62.5%;
 }
 
-body{
-    font-size: 1.6rem;
-    font-family: sans-serif;
-}
+
 a{
     text-decoration: none;
 
 }
 
 
-header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-}
 
-
-.nav {
-    height: 10rem;
+.form-group {
+    font-size: 25px;
+    color: black;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    font-family: ".SF NS Mono";
 
 }
-.nav-list{
-    display: flex;
-    list-style: none;
+
+.description{
+
+    font-size: 30px;
+    color: White;
+    text-align: center;
 
 }
-.nav-item {
-    margin-right: 5rem;
+.btn-btn-primary {
+    background-color: black;
 }
-.nav-item:last-child{
-    margin-right: 0;
-}
-.nav-link {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color:black;
-    transition: opacity .3s;
+.btn-btn-primary{
+    color: white;
+
+
 
 }
-.nav-link:hover{
-    opacity: .6;
-}
-.logo{
-    display: block;
-    width: 8rem;
-}
-.logo {
-    display: block;
-}
-section{
-    display: none;
-}
-Utilities
-.container{
-    max-width: 125rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
 
-}
+
 /*main content */
-.landing-page{
+.body{
     width: 100%;
     min-height: 100vh;
     background-image: linear-gradient(to bottom right,#00203FFF,#ADEFD1FF);
@@ -104,36 +82,7 @@ Utilities
     height: 100vh;
 }
 .title{
-    font-size: 6rem;
-    color: white;
-    margin-bottom: 1rem;
-}
-.description{
-    color:white;
-    margin-bottom: 2.5rem;
-}
-
-.search input {
-    border: none;
-    border-radius: 5rem;
-    paddding: 2rem;
-    outline: none;
-
-}
-.search-bar {
-    width: 30rem;
-
-
-}
-.button{
-    width: 10rem;
-    background-image: linear-gradient(to right,#F08080);
+    font-size: 15rem;
     color: black;
-    cursor: pointer;
-    margin-left: -10rem;
-
-
-}
-.button:hover{
-    background-image: linear-gradient(to right,#F08080);
+    margin-bottom: 1rem;
 }
