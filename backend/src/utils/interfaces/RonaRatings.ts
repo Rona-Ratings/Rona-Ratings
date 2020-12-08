@@ -5,7 +5,6 @@ export interface RonaRatings {
     ronaRatingsSafeTakeOut: string;
     ronaRatingsSixFootRule: string;
     ronaRatingsTotalScore: string;
-    restaurantYelpRating: number;
-    restaurantZip: string;
+
 }
 
