@@ -11,7 +11,7 @@ import {RestaurantCard} from "./RestaurantCard";
 
 export const RestaurantListings = () => {
 const restaurants= useSelector((store)=> {
-    console.log(store)
+
     return store.restaurants ? store.restaurants : []
 })
     const dispatch= useDispatch()
@@ -20,7 +20,7 @@ const restaurants= useSelector((store)=> {
     dispatch (fetchAllRestaurants())
     }
     React.useEffect(initialEffects, [dispatch])
-    console.log(restaurants)
+
 
         return (
             <>

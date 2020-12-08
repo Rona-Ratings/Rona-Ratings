@@ -24,10 +24,13 @@ export const fetchAllRestaurants = () => async dispatch => {
 
 export const fetchRestaurantByRestaurantId =(restaurantId) => async (dispatch,getState) => {
     const restaurants = getState() .restaurants
-    const isFound = restaurants.find(restaurant => restaurant.restaurantId === restaurant)
+
+    const isFound = restaurants.find(restaurant => restaurant.restaurantId === restaurantId)
+
     if (isFound === undefined) {
-        const {data} = httpConfig(`/apis/restaurant/${restaurantId}`)
-        dispatch (data [0])
+        const {data} = await httpConfig (`/apis/restaurant/${restaurantId}`)
+        console.log(data)
+        dispatch(addRestaurantByRestaurantId(data[0]))
 
     }
 }

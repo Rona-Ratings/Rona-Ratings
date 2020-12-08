@@ -6,15 +6,19 @@ import restaurantDetails from"../restaurant-details/restaurant-details.module.cs
 
 import TacoPlaceHolder from '../restaurant-listings/tacos-placeholder.jpg'
 import styles from "../restaurant-listings/restaurant-listings.module.css";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {fetchRestaurantByRestaurantId} from "../../store/restaurants";
 
 export const RestaurantDetails = ({match}) => {
-    console.log(match.params)
+
     const restaurantId=match.params.restaurantId
     const dispatch = useDispatch ()
     const initialEffect = () =>{dispatch(fetchRestaurantByRestaurantId(restaurantId))}
-    React.useEffect(initialEffect,[dispatch])
+    React.useEffect(initialEffect,[dispatch,restaurantId])
+    const restaurant = useSelector(({restaurants}) => {
+        return restaurants.find(restaurant => restaurant.restaurantId === restaurantId)
+    })
+    console.log(restaurant)
     return (
 
         <>
