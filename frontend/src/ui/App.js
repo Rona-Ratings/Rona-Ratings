@@ -19,7 +19,7 @@ export const App = (store) => (
         <BrowserRouter>
             <MainNav/>
             <Switch>
-                <Route exact path="/restaurant-details" component={RestaurantDetails}/>
+                <Route exact path="/restaurant-details/:restaurantId" component={RestaurantDetails} restaurantId = ":restaurantId"/>
                 <Route exact path="/restaurant-listings" component={RestaurantListings}/>
                 <Route exact path="/" component={RestaurantHome}/>
 

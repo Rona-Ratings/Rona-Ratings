@@ -1,68 +1,4 @@
 
-
-/*===========Navigation Bar===========*/
-/**{*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    box-sizing: border-box;*/
-/*}*/
-/*html{*/
-/*    height: 100%;*/
-/*    font-size: 65.5%;*/
-/*}*/
-/*body{*/
-/*    height: 100%;*/
-/*    font-size: 1.6rem;*/
-/*    font-family: sans-serif;*/
-/*}*/
-/*a {*/
-/*    text-decoration: none;*/
-/*}*/
-/*.logo{*/
-/*    display: block;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    margin-top: -37rem;*/
-/*}*/
-/*header{*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    z-index: 1000;*/
-/*    width: 100%;*/
-/*}*/
-/*.nav {*/
-/*    height: 10rem;*/
-/*    display: flex;*/
-/*    align-items: flex-end;*/
-/*    justify-content: space-between;*/
-/*}*/
-/*.nav-list{*/
-/*    display: flex;*/
-/*    list-style: none;*/
-/*}*/
-/*.nav-item {*/
-/*    margin-right: 5rem;*/
-/*}*/
-/*.nav-item:last-child{*/
-/*    margin-right: 0;*/
-/*}*/
-/*.nav-link {*/
-/*    font-size: 1.2rem;*/
-/*    text-transform: uppercase;*/
-/*    color:black;*/
-/*    transition: opacity .3s;*/
-
-/*}*/
-/*.nav-link:hover{*/
-/*    opacity: .6;*/
-
-/*}*/
-/*.logo {*/
-/*    display: block;*/
-/*}*/
-
-/*===========End Navigation Bar===========*/
 /*===========Restaurant Information===========*/
 
 .card-title{
@@ -81,8 +17,10 @@ ul {
 
 /*===========Image Logo===========*/
 .card-img{
-    webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 5px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 5px 0px #000000, 5px 5px 5px 5px rgba(0,0,0,0);
+    width: 20em;
+    height: 20em;
+    /*webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 5px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);*/
+    /*box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 5px 0px #000000, 5px 5px 5px 5px rgba(0,0,0,0);*/
 
 }
 .card{
@@ -108,18 +46,6 @@ ul {
 
 /*===========Footing===========*/
 .footer{
-/*    border: solid black 2px;*/
-/*    !*display: flex;*!*/
-/*    !*justify-content:space-between;*!*/
-/*    background: #F7FF0D;*/
-/*    background: -moz-linear-gradient(-45deg, #ffd700 0%, #C7C7C7 71%, #bf0a30 100%);*/
-/*    background: -webkit-linear-gradient(-45deg, #ffd700 0%, #C7C7C7 71%, #bf0a30 100%);*/
-/*    background: linear-gradient(135deg, #ffd700 0%, #C7C7C7 71%, #bf0a30 100%);*/
-/*    webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 5px 0px #000000, 5px 5px 5px 5px rgba(0,0,0,0);*/
-/*    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 5px 0px #000000, 5px 5px 5px 5px rgba(0,0,0,0);*/
-/*    margin: 1em;*/
-/*    padding: 1em;*/
-/*    border-radius: 1em;*/
 
     background: #303036;
     color: #d3d3d3;

@@ -1,50 +1,54 @@
+
+/*==========================Image==========================*/
 .card-img {
-
-    border: solid black;
-
+    /*border: solid black;*/
     margin: 0.6rem;
-
+    margin-top: 1em;
 }
-
-
 @media(max-width:576px) {
     .card-img {
         max-width: 300px;
         max-height: 300px;
     }
 }
-
 @media(min-width:576px) {
     .card-img {
         max-width: 250px;
         max-height: 250px;
     }
-
 }
-
-
+/*==========================End Image==========================*/
+/*==========================Heater==========================*/
 .card-header {
-
     font-size: 3rem;
-    color: black;
-    background-color: orange !important;
+    color: honeydew;
+    background-color: darkgray !important;
     text-align: center;
     border-radius: 0;
-
 }
-
 .card-title {
-    background-color: steelblue;
+    background-color: black;
     color: white;
     text-align: center;
-
 }
-
-
-
-
-
 p {
     display: inline-block;
     font-size: 1em;
 }
+.col-lg-8{
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+/*==========================End Heater==========================*/
+
+/*==========================Information==========================*/
+.card-title{
+    font-size: 3em;
+}
+li {
+    margin-left: 8em;
+}
+/*==========================End Information==========================*/
+
+
+
