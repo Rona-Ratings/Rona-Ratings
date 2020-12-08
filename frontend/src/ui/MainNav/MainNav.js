@@ -9,6 +9,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+import "./MainNav.css";
+
 
 import { SignOutComponent } from './SignOut'
 
@@ -39,17 +41,17 @@ export const MainNav = (props) => {
     }
 
     return(
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="dark" variant="dark">
             <Container>
                 <LinkContainer exact to="/" >
-                    <Navbar.Brand>Tweeter</Navbar.Brand>
+                    <Navbar.Brand>Rona Ratings</Navbar.Brand>
                 </LinkContainer>
                 <Nav className="mr-auto">
 
                     {/* conditional render if user has jwt / is logged in */}
                     {auth !== null && (
                         <>
-                            <NavDropdown className="nav-link navbar-username" title={auth?.profileAtHandle ?? ""} >
+                            <NavDropdown className="nav-link navbar-username" title={auth?.profileUserName ?? ""} >
                                 <div className="dropdown-item">
                                     <Link to={`/profile/${auth?.profileId}`} className="btn btn-outline-dark">
                                         <FontAwesomeIcon icon="user" />&nbsp;&nbsp;My Profile
@@ -57,9 +59,7 @@ export const MainNav = (props) => {
                                 </div>
                                 <SignOutComponent />
                             </NavDropdown>
-                            <LinkContainer exact to="/image">
-                                <Nav.Link>Image</Nav.Link>
-                            </LinkContainer>
+
                         </>
                     )}
                     {isModalOpen()  &&  (
