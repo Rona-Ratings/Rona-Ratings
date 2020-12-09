@@ -74,19 +74,19 @@ export const RestaurantDetails = ({match}) => {
                             <h2 className={restaurantDetails}>Rona Ratings</h2>
                             <div className={restaurantDetails.rating} >
                                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                <p><b>: Wearing Mask</b></p>
+                                <h4><b>: Wearing Mask</b></h4>
                             </div>
                             <div className={restaurantDetails.rating}>
                                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                <p><b>: Clean Sitting Area</b></p>
+                                <h4><b>: Clean Sitting Area</b></h4>
                             </div>
                             <div className={restaurantDetails.rating}>
                                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                <p><b>: 6ft Rule</b></p>
+                                <h4><b>: 6ft Rule</b></h4>
                             </div>
                             <div className={restaurantDetails.rating}>
                                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                <p><b>: Safe Takeout</b></p>
+                            <h4><b>: Safe Takeout</b></h4>
                             </div>
                         </div>
                     </div>

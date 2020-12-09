@@ -18,9 +18,9 @@ h2{
     content: "\2605";
     position: absolute;
 }
-/*.restaurantDetails{*/
-/*    font-size:4em;*/
-/*}*/
+span{
+    font-size: 3em;
+}
 
 
 /*===========End Rona Rating===========*/

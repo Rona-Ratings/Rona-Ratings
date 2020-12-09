@@ -33,7 +33,7 @@
 }
 p {
     display: inline-block;
-    font-size: 1em;
+    /*font-size: 1em;*/
 }
 .col-lg-8{
     margin-top:1em;
