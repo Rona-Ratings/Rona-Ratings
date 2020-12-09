@@ -1,6 +1,6 @@
 /*===========Rona Rating===========*/
 h2{
-    padding-left: 1em;
+    margin-top: 2em;
     font-size: 4em;
 }
 .rating > span:hover:before {
@@ -11,12 +11,13 @@ h2{
 .rating {
     unicode-bidi: bidi-override;
     direction: rtl;
-    padding-left:2em;
+    ;
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
     content: "\2605";
     position: absolute;
+    color: yellow;
 }
 span{
     font-size: 3em;

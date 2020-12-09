@@ -1,13 +1,12 @@
-
+span {
+}
 
 /*===========Restaurant Information===========*/
 .card-title{
-    margin-top: 1em;
+
 }
 
-.col-md-4{
-    margin-right: 2em;
-}
+
 ul {
     padding-right: 2em;
     margin-right: 1em;
@@ -30,6 +29,7 @@ ul {
 
 }
 .card-body{
+    margin-top: 2rem;
     border: black solid;
     padding: 0em;
 }

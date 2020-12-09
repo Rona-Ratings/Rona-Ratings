@@ -1,60 +1,61 @@
 import React from "react";
-
+import {Button, Form} from "react-bootstrap";
 import "./restaurant-home.css";
 import Logo from './logo-ws.png'
 
-import Card from "react-bootstrap/cjs/Card";
-export const RestaurantHome= () => (
-<>
+export const RestaurantHome = () => (
     <>
 
 
-      <div class="body">
+        <div className="body">
 
-        <div class="container">
-            <div class="col-lg-12">
-            <div class="row">
-
-
-
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <img src={Logo} alt="placeholder" id="logo"/>
-
-                    <p class="description"> Welcome to Rona Ratings! Are you in search of a popular Albuquerque restaurant
-                        and have concern about
-                        Covid-19 infections in the area?  </p>
-
-                </div>
-                <div className="row d-flex justify-content-center">
-                    <div class="col-lg-6">
-                        <form>
-                            <div className="form-group">
-                                <label htmlFor="exampleInputEmail1"><b>Enter Zipcode or Food Type</b> </label>
-                                <input type="text" className="form-control" id="categoryId"/>
-                                <button type="submit" className="btn-btn-primary">Search!</button>
-                            </div>
-                    </form>
+            <div className="container">
+                <div className="col-lg-12">
+                    <div className="row">
 
 
+                    </div>
+                    <div className="row d-flex justify-content-center">
+                        <img className="mt-4" src={Logo} alt="placeholder" id="logo"/>
+
+                        <p className="description"> Welcome to Rona Ratings! Are you in search of a popular Albuquerque
+                            restaurant
+                            and have concern about
+                            Covid-19 infections in the area? </p>
+
+                    </div>
+                    <div className=
+                             "row d-flex justify-content-center">
+                        <div className="col-lg-6">
+                            <Form>
+                                <Form.Group controlId="Category">
+                                    <Form.Label>Restaurant Type</Form.Label>
+                                    <Form.Control type="text" placeholder="Restaurant Type"/>
+                                </Form.Group>
+                                <Form.Group controlId="Zipcode">
+                                    <Form.Label>Zipcode</Form.Label>
+                                    <Form.Control type="text" placeholder="Enter Zipcode"/>
+                                    <Form.Text className="text-muted">
+                                    </Form.Text>
+                                </Form.Group>
 
 
+                                <Button variant="primary" type="submit">
+                                    Submit
+                                </Button>
+                            </Form>
 
 
+                        </div>
+                    </div>
 
 
                 </div>
             </div>
+        </div>
 
 
-                </div>
-            </div>
-      </div>
-
-</>
-
-
-</>)
+    </>)
 
 
 
