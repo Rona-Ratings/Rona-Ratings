@@ -39,23 +39,7 @@ export const RestaurantHome = () => {
                         <div className=
                                  "row d-flex justify-content-center">
                             <div className="col-lg-6">
-                                {/*<Form>*/}
-                                {/*    <Form.Group controlId="Category">*/}
-                                {/*        <Form.Label>Restaurant Type</Form.Label>*/}
-                                {/*        <Form.Control type="text" placeholder="Restaurant Type"/>*/}
-                                {/*    </Form.Group>*/}
-                                {/*    <Form.Group controlId="Zipcode">*/}
-                                {/*        <Form.Label>Zipcode</Form.Label>*/}
-                                {/*        <Form.Control type="text" placeholder="Enter Zipcode"/>*/}
-                                {/*        <Form.Text className="text-muted">*/}
-                                {/*        </Form.Text>*/}
-                                {/*    </Form.Group>*/}
 
-
-                                {/*    <Button variant="primary" type="submit">*/}
-                                {/*        Submit*/}
-                                {/*    </Button>*/}
-                                {/*</Form>*/}
 
                                 <SearchForm />
 

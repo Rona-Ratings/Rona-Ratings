@@ -21,7 +21,7 @@ export const RestaurantDetails = ({match}) => {
         return restaurants.find(restaurant => restaurant.restaurantId === restaurantId)
     })
 
-    console.log(restaurant)
+
     return (
 
         <>

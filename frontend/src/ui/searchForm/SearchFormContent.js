@@ -102,7 +102,7 @@ export const SearchFormContent = (props) => {
                 </div>
 
 
-                <FormDebugger {...props} />
+
             </form>
             {
                 status && (<div className={status.type}>{status.message}</div>)
