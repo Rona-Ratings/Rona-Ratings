@@ -35,7 +35,7 @@ export function RestaurantCard(props) {
                                             <li><b> Restaurant Address : </b>{restaurant.restaurantAddress}</li>
                                             <li><b>Phone Number : </b>{restaurant.restaurantPhone}</li>
                                             <li><b>Delivery Options : </b>{restaurant.restaurantServices}</li>
-                                            <li><b>Restaurant Ratings : </b>{restaurant.restaurantYelpRating}</li>
+                                            <li><b>Yelp Ratings : </b>{restaurant.restaurantYelpRating}</li>
                                         </ul>
                                     </h4>
                                 </p>

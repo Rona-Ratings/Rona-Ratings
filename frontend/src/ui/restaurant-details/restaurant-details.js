@@ -1,5 +1,6 @@
 import React from "react";
 import "./restaurant-details.css"
+import {Button} from "react-bootstrap";
 
 // import {Badge, Container} from "react-bootstrap";
 import restaurantDetails from"../restaurant-details/restaurant-details.module.css"
@@ -92,7 +93,9 @@ export const RestaurantDetails = ({match}) => {
                                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                             </div>
                             </div>
-
+                        </div>
+                        <div className="row d-flex justify-content-center">
+                            <Button variant="primary">Submit Rating</Button>
                         </div>
                     </div>
                 </div>
