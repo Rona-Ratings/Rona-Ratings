@@ -8,6 +8,7 @@ import TacoPlaceHolder from '../restaurant-listings/tacos-placeholder.jpg'
 import styles from "../restaurant-listings/restaurant-listings.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchRestaurantByRestaurantId} from "../../store/restaurants";
+import {RestaurantCard} from "../restaurant-listings/RestaurantCard";
 
 export const RestaurantDetails = ({match}) => {
 
@@ -18,69 +19,74 @@ export const RestaurantDetails = ({match}) => {
     const restaurant = useSelector(({restaurants}) => {
         return restaurants.find(restaurant => restaurant.restaurantId === restaurantId)
     })
+
     console.log(restaurant)
     return (
 
         <>
 
-            <div id="target">
-
-            </div>
             <div className="container">
                 <div className="row d-flex justify-content-center">
                     <div className="col-lg-12 px-0">
-                        <div className="card">
-                            <div className={styles.cardHeader}>
-                                <div className="card-header">
-                                    Taco Juan's Taco Shop
-                                </div>
-                            </div>
-                            <div className="col-lg-12">
-                                <div className="row">
-                                    <div className="col-lg-3 d-flex justify-content-center">
-                                        <img src={TacoPlaceHolder} className="card-img" alt="placeholder" />
-                                    </div>
-                                    <div className="col-lg-9 d-flex align-items-center">
-                                        <div className="card-body">
-                                            <h3 className="card-title">Restaurant Information:</h3>
-                                            <p className="card-text">
-                                                <h4>Address and Hours:UNM Carri Tingley Hospital -</h4>
-                                                <p>1127 University Blvd, NE Albuquerque, NM 87102 Friday 8:00am - 2:00pm</p>
-                                                <h4>contact Information:</h4>
-                                                <ul>
-                                                    <li>Phone Number:505-319-5619</li>
-                                                    <li>Delivery Option: Yes with a perches of $20.00 or more.</li>
-                                                    <li>Patio Option: Yes</li>
-                                                </ul>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {restaurant !== null && <RestaurantCard restaurant = {restaurant} key ={restaurant.restaurantId} />}
                     </div>
                 </div>
             </div>
+            {/*<div className="container">*/}
+            {/*    <div className="row d-flex justify-content-center">*/}
+            {/*        <div className="col-lg-12 px-0">*/}
+            {/*            <div className="card">*/}
+            {/*                <div className={styles.cardHeader}>*/}
+            {/*                    <div className="card-header">*/}
+            {/*                        Taco Juan's Taco Shop*/}
+            {/*                    </div>*/}
+            {/*                </div>*/}
+            {/*                <div className="col-lg-12">*/}
+            {/*                    <div className="row">*/}
+            {/*                        <div className="col-lg-3 d-flex justify-content-center">*/}
+            {/*                            <img src={TacoPlaceHolder} className="card-img" alt="placeholder" />*/}
+            {/*                        </div>*/}
+            {/*                        <div className="col-lg-9 d-flex align-items-center">*/}
+            {/*                            <div className="card-body">*/}
+            {/*                                <h3 className="card-title">Restaurant Information:</h3>*/}
+            {/*                                <p className="card-text">*/}
+            {/*                                    <h4>Address and Hours:UNM Carri Tingley Hospital -</h4>*/}
+            {/*                                    <p>1127 University Blvd, NE Albuquerque, NM 87102 Friday 8:00am - 2:00pm</p>*/}
+            {/*                                    <h4>contact Information:</h4>*/}
+            {/*                                    <ul>*/}
+            {/*                                        <li>Phone Number:505-319-5619</li>*/}
+            {/*                                        <li>Delivery Option: Yes with a perches of $20.00 or more.</li>*/}
+            {/*                                        <li>Patio Option: Yes</li>*/}
+            {/*                                    </ul>*/}
+            {/*                                </p>*/}
+            {/*                            </div>*/}
+            {/*                        </div>*/}
+            {/*                    </div>*/}
+            {/*                </div>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className="container px-0">
-                <div className="card border-dark mb-3">
+                <div className="card mb-3">
                     <div className="row no-gutters">
                         <div className="col-md-4">
                             <h2 className={restaurantDetails}>Rona Ratings</h2>
-                            <div className={restaurantDetails.rating}>
-                                <span className={1}>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                <p>: Wearing Mask</p>
+                            <div className={restaurantDetails.rating} >
+                                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                <p><b>: Wearing Mask</b></p>
                             </div>
                             <div className={restaurantDetails.rating}>
                                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                <p>: Clean Sitting Area</p>
+                                <p><b>: Clean Sitting Area</b></p>
                             </div>
                             <div className={restaurantDetails.rating}>
                                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                <p>: 6ft Rule</p>
+                                <p><b>: 6ft Rule</b></p>
                             </div>
                             <div className={restaurantDetails.rating}>
                                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                <p>: Safe Takeout</p>
+                                <p><b>: Safe Takeout</b></p>
                             </div>
                         </div>
                     </div>

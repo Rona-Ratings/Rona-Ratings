@@ -19,8 +19,6 @@ ul {
 .card-img{
     width: 20em;
     height: 20em;
-    /*webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 5px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);*/
-    /*box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 5px 0px #000000, 5px 5px 5px 5px rgba(0,0,0,0);*/
 
 }
 .card{
@@ -45,19 +43,9 @@ ul {
 }
 
 /*===========Footing===========*/
-.footer{
-
-    background: #303036;
-    color: #d3d3d3;
-    height: 400px;
-    position:relative;
-    margin-top: 10px;
-    clear: both;
 
 
 
-
-}
 /*.footer .footer-content{*/
 
 /*    height: 350px;*/

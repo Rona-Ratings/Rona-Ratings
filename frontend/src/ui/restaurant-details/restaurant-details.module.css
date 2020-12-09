@@ -1,7 +1,7 @@
 /*===========Rona Rating===========*/
 h2{
     padding-left: 1em;
-    font-size: 20px;
+    font-size: 4em;
 }
 .rating > span:hover:before {
     content: "\2605";
@@ -11,11 +11,16 @@ h2{
 .rating {
     unicode-bidi: bidi-override;
     direction: rtl;
-    padding-left: 2em;
+    padding-left:2em;
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
     content: "\2605";
     position: absolute;
 }
+/*.restaurantDetails{*/
+/*    font-size:4em;*/
+/*}*/
+
+
 /*===========End Rona Rating===========*/
