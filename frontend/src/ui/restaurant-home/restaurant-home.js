@@ -31,7 +31,7 @@ export const RestaurantHome= () => (
                         <form>
                             <div className="form-group">
                                 <label htmlFor="exampleInputEmail1"><b>Enter Zipcode or Food Type</b> </label>
-                                <input type="category" className="form-control" id="categoryId"/>
+                                <input type="text" className="form-control" id="categoryId"/>
                                 <button type="submit" className="btn-btn-primary">Search!</button>
                             </div>
                     </form>
