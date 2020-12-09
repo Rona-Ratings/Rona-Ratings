@@ -24,7 +24,7 @@ export function RestaurantCard(props) {
                 <div className="col-lg-12">
                     <div className="row">
                         <div className="col-lg-4 d-flex justify-content-center">
-                            <img src={restaurant.restaurantImage} className="card-img" onClick={handelClick} alt="placeholder" />
+                            <img src={restaurant.restaurantImage} className="card-img" onClick={handelClick} alt="Card Image" />
                         </div>
                         <div className="col-lg-8">
                             <div className="card-body">

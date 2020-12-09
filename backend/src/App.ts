@@ -11,6 +11,7 @@ const MemoryStore = require('memorystore')(session);
 import {passportStrategy} from "./apis/sign-in/sign-in.controller";
 import {SignInRouter} from "./apis/sign-in/sign-in.route";
 import {ProfileRoute} from "./apis/profile/profile.route";
+import {restaurantByTypeAndZipRoute} from "./apis/restaurant/restaurantByTypeAndZip.route";
 
 
 

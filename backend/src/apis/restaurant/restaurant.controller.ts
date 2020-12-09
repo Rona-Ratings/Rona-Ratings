@@ -57,14 +57,15 @@ export async function getRestaurantByRestaurantIdController(request: Request, re
     }
 }
 
-export async function restaurantByCategoryAndZipController(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getRestaurantByCategoryAndZipController(request: Request, response: Response, nextFunction: NextFunction) {
     try {
-        const {categoryId} = request.params
+        const {categoryType} = request.params
         const {restaurantZip} = request.params
-        const data = await selectRestaurantByCategoryAndZip(categoryId, restaurantZip)
-        console.log(categoryId)
+        console.log(categoryType)
         console.log(restaurantZip)
         console.log(request.params)
+        const data = await selectRestaurantByCategoryAndZip(categoryType, restaurantZip)
+
         console.log(data)
         const status: Status = {status: 200, data, message: null}
         return response.json(status)

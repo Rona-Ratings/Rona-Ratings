@@ -12,14 +12,18 @@ const slice = createSlice({
         },
         addRestaurantByRestaurantId :(restaurants,action) =>{
             restaurants.push(action.payload)
+        },
+        getRestaurantsByTypeAndZip :(restaurants,action) =>{
+            return action.payload
         }
+
     }
 })
-export const {getAllRestaurants,addRestaurantByRestaurantId} = slice.actions
+export const {getRestaurantsByTypeAndZip,addRestaurantByRestaurantId} = slice.actions
 
-export const fetchAllRestaurants = () => async dispatch => {
-    const  {data} = await httpConfig ('/apis/restaurant');
-    dispatch(getAllRestaurants(data))
+export const fetchRestaurantsByTypeAndZip = (categoryType, restaurantZip) => async dispatch => {
+    const  {data} = await httpConfig (`/apis/restaurant/categoryAndZip/${categoryType}/${restaurantZip}`);
+    dispatch(getRestaurantsByTypeAndZip(data[0]))
 }
 
 export const fetchRestaurantByRestaurantId =(restaurantId) => async (dispatch,getState) => {

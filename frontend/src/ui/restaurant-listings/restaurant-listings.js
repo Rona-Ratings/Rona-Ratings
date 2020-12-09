@@ -2,11 +2,15 @@ import './restaurant-listings.css'
 import React from "react";
 import {Badge} from "react-bootstrap";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchAllRestaurants} from "../../store/restaurants";
+import {fetchRestaurantsByTypeAndZip} from "../../store/restaurants";
 import {RestaurantCard} from "./RestaurantCard";
 
 
-export const RestaurantListings = () => {
+export const RestaurantListings = ({location}) => {
+    console.log(location.state)
+    console.log(location.state.categoryType)
+    console.log(location.state.restaurantZip)
+
     const restaurants = useSelector((store) => {
 
         return store.restaurants ? store.restaurants : []
@@ -14,7 +18,7 @@ export const RestaurantListings = () => {
     const dispatch = useDispatch()
 
     const initialEffects = () => {
-        dispatch(fetchAllRestaurants())
+        dispatch(fetchRestaurantsByTypeAndZip(location.state.categoryType, location.state.restaurantZip))
     }
     React.useEffect(initialEffects, [dispatch])
 
