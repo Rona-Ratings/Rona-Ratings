@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "./restaurant-home/restaurant-home.css"
 import {MainNav} from "./MainNav/MainNav";
 import {Provider} from "react-redux";
+import Footer from "./Footer/Footer";
 
 
 
@@ -27,6 +28,7 @@ export const App = (store) => (
             </Switch>
         </BrowserRouter>
         </Provider>
+        <Footer/>
 
     </>
 )

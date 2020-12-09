@@ -1,6 +1,6 @@
 
-/*===========Restaurant Information===========*/
 
+/*===========Restaurant Information===========*/
 .card-title{
     margin-top: 1em;
 }
@@ -43,9 +43,6 @@ ul {
 }
 
 /*===========Footing===========*/
-
-
-
 /*.footer .footer-content{*/
 
 /*    height: 350px;*/
@@ -83,9 +80,6 @@ ul {
 /*.footer .footer-content .footer-section {*/
 /*    flex: 1;*/
 /*    padding: 25px;*/
-
-
-
 
 /*}*/
 /*.footer .footer-content .about .socials a {*/
@@ -152,10 +146,7 @@ ul {
 /*===========End Of Footing===========*/
 
 
-/*------------ text --------------*/
+
 .col-md-4 {
     padding: 2em 2em;
-}
-body{
-    background-image: linear-gradient(to bottom right,#00203FFF,#ADEFD1FF);;
 }
