@@ -1,7 +1,6 @@
 /*===========Rona Rating===========*/
 h2{
-    margin-top: 2em;
-    font-size: 4em;
+
 }
 .rating > span:hover:before {
     content: "\2605";
