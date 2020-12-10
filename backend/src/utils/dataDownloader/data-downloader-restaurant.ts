@@ -42,17 +42,14 @@ function dataDownloaderRestaurant(): Promise<any> {
 
                  const createRestaurants = async (array: any) => {
 
-                     // Change this part.  Instead of putting the posts into an arrray insert them into the database.
-                     // See https://github.com/Deep-Dive-Coding-Fullstack-Licensing/example-capstone/blob/development/backend/utils/tweet/insertTweet.ts for example.
+
                      const foundCategories: Category[] = []
                      for (const currentRestaurant of array.businesses) {
                          const restaurantAddress = `${currentRestaurant.location.address1}, ${currentRestaurant.location.city}, ${currentRestaurant.location.state}, ${currentRestaurant.location.zip_code}`
                          const restaurantServices = currentRestaurant.transactions.join(" ")
 
 
-                         // TODO grab all necessary attributes from Yelp and put them into Restaurant object
-                         // TODO write insertRestaurant MYSQL enabled function, Write in TS
-                         // TODO call insertRestaurant function and pass Restaurant as an argument
+
                          let restaurant: Restaurant = {
                              restaurantId: uuidv4(),
                              restaurantAddress,
