@@ -33,41 +33,7 @@ export const RestaurantDetails = ({match}) => {
 
                 </div>
             </div>
-            {/*<div className="container">*/}
-            {/*    <div className="row d-flex justify-content-center">*/}
-            {/*        <div className="col-lg-12 px-0">*/}
-            {/*            <div className="card">*/}
-            {/*                <div className={styles.cardHeader}>*/}
-            {/*                    <div className="card-header">*/}
-            {/*                        Taco Juan's Taco Shop*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div className="col-lg-12">*/}
-            {/*                    <div className="row">*/}
-            {/*                        <div className="col-lg-3 d-flex justify-content-center">*/}
-            {/*                            <img src={TacoPlaceHolder} className="card-img" alt="placeholder" />*/}
-            {/*                        </div>*/}
-            {/*                        <div className="col-lg-9 d-flex align-items-center">*/}
-            {/*                            <div className="card-body">*/}
-            {/*                                <h3 className="card-title">Restaurant Information:</h3>*/}
-            {/*                                <p className="card-text">*/}
-            {/*                                    <h4>Address and Hours:UNM Carri Tingley Hospital -</h4>*/}
-            {/*                                    <p>1127 University Blvd, NE Albuquerque, NM 87102 Friday 8:00am - 2:00pm</p>*/}
-            {/*                                    <h4>contact Information:</h4>*/}
-            {/*                                    <ul>*/}
-            {/*                                        <li>Phone Number:505-319-5619</li>*/}
-            {/*                                        <li>Delivery Option: Yes with a perches of $20.00 or more.</li>*/}
-            {/*                                        <li>Patio Option: Yes</li>*/}
-            {/*                                    </ul>*/}
-            {/*                                </p>*/}
-            {/*                            </div>*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+
 
                 <div className="card mb-3">
                     <div className="card-header">
@@ -76,15 +42,33 @@ export const RestaurantDetails = ({match}) => {
                     <div className="col-md-12 mt-2">
                         <div className="row d-flex">
                             <div className="col-md-4 d-flex justify-content-center">
-                            <div className={restaurantDetails.rating} >
-                                <h4 className="d-flex justify-content-center"><b>Wearing Mask</b></h4>
-                                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                <fieldset className="star-rating">
+
+
+                                    <div className={restaurantDetails.rating}>
+                                        <input className={restaurantDetails.rating} type="radio" name="rating" value="1"
+                                               id="rating-1"/>
+
+                                        <input className={restaurantDetails.rating} type="radio" name="rating" value="2"
+                                               id="rating-2"/>
+
+                                        <input className={restaurantDetails.rating} type="radio" name="rating" value="3"
+                                               id="rating-3"/>
+
+                                        <input className={restaurantDetails.rating} type="radio" name="rating" value="4"
+                                               id="rating-4"/>
+
+                                        <input className={restaurantDetails.rating} type="radio" name="rating" value="5"
+                                               id="rating-5"/>
+
+                                    </div>
+                                </fieldset>
                             </div>
-                            </div>
+
                             <div className="col-md-4 d-flex justify-content-center">
                             <div className={restaurantDetails.rating}>
                                 <h4 className="d-flex justify-content-center"><b>Safe Takeout</b></h4>
-                                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                <span></span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                             </div>
                             </div>
                             <div className="col-md-4 d-flex justify-content-center">
@@ -99,9 +83,9 @@ export const RestaurantDetails = ({match}) => {
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
+            </div>
+
 
 
         </>
